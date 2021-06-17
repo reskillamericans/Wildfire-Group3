@@ -83,6 +83,13 @@ header {
     align-items: center;
     padding: 0 1rem;
 }
+.about {
+    margin: 0 2rem;
+}
+.about p {
+    width: 55vw;
+    padding: 1rem 0rem;
+}
 header h1 {
     margin: 0;
 }
@@ -96,7 +103,6 @@ button.cta {
 .team {
     text-align: center;
     margin-top: 5rem;
-
 } 
 .team-container {
     display: grid;
@@ -108,6 +114,19 @@ button.cta {
 }
 .team-pic {
     border-radius: 50%;
+}
+/* Section Call to Action */
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 7rem 2rem;
+}
+.cta-container div:first-child {
+    order: 2;
+}
+.cta.img {
+    width: 84px;
 }
 /* Responsive @400px and up */
 @media only screen and (min-width: 400px) {
@@ -137,5 +156,22 @@ button.cta {
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 10rem;
         margin: 0 5rem;
+    }
+     /* Call to Action Section */
+    .cta-container {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    justify-content: center;
+    margin-top: 10rem;
+    }
+    .cta-container div:first-child{
+        order: -1;
+    }
+    .cta-text {
+        width: 50vw;
+    }
+    .cta-img {
+        margin-left: 3rem;
     }
 }
