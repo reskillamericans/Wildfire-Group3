@@ -75,11 +75,8 @@ a.active-link {
 /* Header */
 header {
     background-image: url("/about-us-images/header-fire.svg");
-    background-repeat: no-repeat;
-    object-fit: cover;
-    height: 596px;
     width: 100%;
-    object-position: bottom;
+    object-fit: cover;
 }
 .about {
     margin: 0 2rem;
@@ -101,6 +98,12 @@ button.cta {
     color: var(--background);
     padding: .5rem 5rem;
     border-radius: 4px;
+}
+button.cta:hover {
+    background-color: var(--background);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+
 }
 /* Section Meet Our Team */
 .team {
@@ -131,6 +134,9 @@ button.cta {
     width: 84px;
 }
 /* Footer */
+.bold {
+    font-weight: 700;
+}
 .footer-info {
     display: grid;
     grid-template-columns: 1fr;
@@ -184,7 +190,7 @@ font-size: 28px;
     }
     /* Header */
     .about {
-        margin: 0 4rem;
+        margin: 0rem 4rem;
     }
     /* Section Meet our Team */
     .team-container {
