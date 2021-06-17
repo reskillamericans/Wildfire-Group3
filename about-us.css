@@ -144,6 +144,11 @@ button.cta:hover {
     padding: 0;
     background-color: #C4C4C4;
 }
+.link-list h3{
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0px;
+}
 form {
     display: grid;
     width: 20%;
@@ -159,10 +164,6 @@ input {
 button.cta-subscribe {
     height: 40px;
     width: 344px;
-}
-.link-list h3{
-    font-weight: 600;
-    font-size: 16px;
 }
 ul.footer-links {
     list-style-type: none;
@@ -251,8 +252,6 @@ font-size: 28px;
    .footer-info {
        display: grid;
        grid-template-columns: 1fr 1fr 1fr;
-       margin-top: 10rem;
-       padding: 1 4rem;
        align-items: center;
        justify-content: space-evenly;
    }
