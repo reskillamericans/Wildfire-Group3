@@ -113,19 +113,33 @@ button.cta:hover {
 .team-container {
     display: grid;
     grid-template-columns: 1fr;
+    grid-column-gap: 203rem;
     margin: 0 2rem;
 }
-
+.team-card h3 {
+    line-height: 20px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    font-weight: 700;
+}
+.team-card p {
+    line-height: 28px;
+    width:320px;
+    margin-top: 2.5rem;
+    font-size: 21px;
+}
 .team-pic {
     border-radius: 50%;
-    width: 196px;
+    height: 196px;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 /* Section Call to Action */
 .cta-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 7rem 2rem;
+    margin: 7rem 3rem;
 }
 .cta-container div:first-child {
     order: 2;
@@ -134,36 +148,31 @@ button.cta:hover {
     width: 84px;
 }
 /* Footer */
+
 .bold {
     font-weight: 700;
+    font-size: 21px;
 }
 .footer-info {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 0;
-    padding: 0;
     background-color: #C4C4C4;
+    padding: 2rem 2rem;
 }
-.link-list h3{
-    font-weight: 600;
+.footer-info h3{
+    font-weight: 700;
     font-size: 16px;
-    margin: 0px;
 }
 form {
     display: grid;
-    width: 20%;
 }
 input {
     margin-bottom: 1rem;
     border: none;
     border-radius: 4px;
-    height: 40px;
-    width: 343px;
     color: var(--secondary_text);
-}
-button.cta-subscribe {
-    height: 40px;
-    width: 344px;
+    padding: .5rem 0rem;
+    text-align: center;
 }
 ul.footer-links {
     list-style-type: none;
@@ -227,7 +236,7 @@ font-size: 28px;
     /* Section Meet our Team */
     .team-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
         column-gap: 10rem;
         margin: 0 4rem;
     }
@@ -235,7 +244,6 @@ font-size: 28px;
     .cta-container {
     display: flex;
     flex-direction: row;
-    margin: 2rem;
     justify-content: center;
     margin-top: 10rem;
     }
@@ -252,7 +260,23 @@ font-size: 28px;
    .footer-info {
        display: grid;
        grid-template-columns: 1fr 1fr 1fr;
-       align-items: center;
-       justify-content: space-evenly;
+       grid-gap: 200px;
+       padding: 69px 100px;
    }
+   .subscribe {
+       align-self: start;
+   }
+   input {
+        padding: 0;
+        height: 40px;
+        width: 343px;
+        text-align: justify;
+    }
+    ::placeholder{
+        text-indent: 1rem;
+    }
+    button.cta-subscribe {
+        height: 40px;
+        width: 344px;
+    }
 }
