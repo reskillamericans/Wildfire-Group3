@@ -56,7 +56,7 @@ nav{
     justify-content: center;
     width: 100%;
 }
-ul {
+ul.nav-links {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -128,7 +128,7 @@ button.cta {
 .cta.img {
     width: 84px;
 }
-/* Responsive @400px and up */
+/* Responsive Styling @400px and up */
 @media only screen and (min-width: 400px) {
     header {
         height: 65vh;
@@ -142,7 +142,7 @@ button.cta {
     .logo {
         justify-content: start;
     }
-    ul {
+    ul.nav-links {
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
