@@ -1,0 +1,200 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End CSS Reset */
+
+body {
+    background-color: #F9F9F9;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.container {
+    width: 100%;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    z-index: -1;
+}
+
+/******** Header ********/
+header {
+    height: 70px;
+}
+
+ul {
+    display: flex;
+}
+
+.main-nav {
+    align-items: center;
+    margin: 0 60px;
+}
+.main-nav li {
+    padding: 20px 15px;
+    font-weight: 700;
+}
+
+.main-nav li:nth-child(4) {
+    color: #FF8B00;
+}
+.main-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.logo {
+    flex-grow: 4;
+}
+
+ .logo img {
+     width: 136px;
+ }
+
+/******** Contact Form ********/
+#contact-form {
+    margin:  30px 114px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 700;
+    padding-top: 15px;
+}
+
+input, textarea {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #ECECEC;
+    border: none;
+    border-radius: 4px;
+}
+sup {
+    color: #FF0000;
+}
+
+button {
+    background: #FF8B00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 70px;
+    margin: 15px 0;
+    width: 343px;
+}
+
+#contact-form-submit {
+    align-self: center;
+}
+
+/******** Footer ********/
+.main-footer {
+    color: #333333;
+    background-color: #C4C4C4;
+    height: 300px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#newsletter p {
+    font-size: 21px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+#newsletter label {
+    font-size: 21px;
+    font-weight: 400;
+}
+#subscribe-email {
+    width: 320px;
+}
+#subscribe-btn {
+    margin: 0;
+}
+
+.footer-nav {
+    flex-direction: column;
+}
+.footer-nav li {
+    padding: 10px 0;
+}
+
+.footer-nav li:first-child {
+    font-weight: 700;
+}
+i {
+    padding-right: 30px;
+}
+.s-footer {
+    background-color: #63625B;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
