@@ -50,6 +50,7 @@ nav{
     flex-wrap: wrap;
     background-color: var(--background);
     margin: 0;
+    padding-top: 1rem;
 }
 .logo {
     justify-content: center;
@@ -68,7 +69,7 @@ ul {
     text-decoration: none;
     color: var(--primary_text);
 }
-.active-link {
+a.active-link {
     color: var(--primary);
 }
 /* Header */
