@@ -248,9 +248,32 @@ i {
     #contact-form button {
         width: 200px;
     }
-    #newsletter {
-
-        font-size: 12px;
+    .main-footer {
+        justify-content: left;
+    }
+    #newsletter p {
+        padding: 15px;
+    }
+    #newsletter p,
+    #newsletter label {
+        font-size: 16px;
+    }
+    #newsletter label {
+        padding: 0 15px;
+    }
+    #subscribe-email {
+        width: 275px;
+        margin: 15px;
+    }
+    #subscribe-btn {
+        width: 298px;
+        margin: 5px 15px;
+    }
+    .footer-nav {
+        margin: 15px;
+    }
+    .footer-nav li {
+        padding: 10px 0;
     }
 
 }
