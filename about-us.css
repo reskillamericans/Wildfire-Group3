@@ -114,10 +114,11 @@ button.cta:hover {
     margin-top: 5rem;
 } 
 .team-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 203rem;
-    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 .team-card h3 {
     line-height: 20px;
@@ -239,12 +240,7 @@ font-size: 28px;
         margin: 0rem 4rem;
     }
     /* Section Meet our Team */
-    .team-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        column-gap: 10rem;
-        margin: 0 4rem;
-    }
+   
      /* Call to Action Section */
     .cta-container {
     display: flex;
@@ -285,3 +281,15 @@ font-size: 28px;
         width: 344px;
     }
 }
+/* Responsive Styling 930px and up */
+@media only screen and (min-width: 930px){
+    .team-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .team-card {
+        width: 30%;
+        padding: 3rem;
+    }
+    }
