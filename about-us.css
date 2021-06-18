@@ -5,7 +5,7 @@
     --secondary_text: #797474;
     --tertiary_text: #C3C7D2;
     --primary: #FF8B00;
-    --secondary: #FF624D;
+    --secondary: #089285;
 }
 /* Typography */
 body {
@@ -70,6 +70,9 @@ ul.nav-links {
     color: var(--primary_text);
 }
 a.active-link {
+    color: var(--primary);
+}
+.nav-links a:hover {
     color: var(--primary);
 }
 /* Header */
@@ -182,6 +185,9 @@ ul.footer-links {
 .footer-links a {
     text-decoration: none;
     color: var(--primary_text);
+}
+.footer-links a:hover {
+    color: var(--primary);
 }
 .social {
     margin-top: 2rem;
