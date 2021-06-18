@@ -229,3 +229,28 @@ i {
         padding-bottom: 30px;
     }
 }
+
+@media all and (max-width: 550px){
+    .main-nav {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+    .main-nav li {
+        padding: 20px 5px;
+        font-weight: 700;
+    }
+    .logo img {
+        width: 100px;
+    }
+    #contact-form {
+        margin: 30px;
+    }
+    #contact-form button {
+        width: 200px;
+    }
+    #newsletter {
+
+        font-size: 12px;
+    }
+
+}
