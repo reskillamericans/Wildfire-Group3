@@ -93,14 +93,15 @@ ul {
 .main-nav li:nth-child(4) {
     color: #FF8B00;
 }
-a:link{
+a:link,
+a:visited{
     text-decoration: none;
     color: #333333;
 }
 
-a:visited,
-a:hover,
-a:active {
+.main-nav a:visited,
+.main-nav a:hover,
+.main-nav a:active {
     color: #FF8B00;
 }
 
