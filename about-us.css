@@ -1,0 +1,304 @@
+/* Color */
+:root {
+    --background: #F9F9F9;
+    --primary_text: #333333;
+    --secondary_text: #797474;
+    --tertiary_text: #C3C7D2;
+    --primary: #FF8B00;
+    --secondary: #089285;
+}
+/* Typography */
+body {
+    font-family: "Open Sans",sans-serif; 
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary_text);
+    background-color: white;
+    margin: 0;
+}
+h1 {
+    font-size: 10vw;
+    font-weight: 400;
+}
+h2 {
+    font-size: 5vw;
+    font-weight: 400;
+}
+h3 {
+    font-size: 21px;
+    font-weight: 400;
+}
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+}
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #180126;
+    font-size: 1rem;
+}
+.logo img {
+    width: 33px;
+}
+/* Navbar */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--background);
+    margin: 0;
+    padding-top: 1rem;
+}
+.logo {
+    justify-content: center;
+    width: 100%;
+}
+ul.nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-weight: 700;
+    width: 100%;
+    padding: 0;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary_text);
+}
+a.active-link {
+    color: var(--primary);
+}
+.nav-links a:hover {
+    color: var(--primary);
+}
+/* Header */
+header {
+    background-image: url("/images/header-fire.svg");
+    width: 100%;
+    object-fit: cover;
+}
+.about {
+    margin: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+header h1 {
+    margin: 0;
+}
+header h2 {
+    line-height: 42px;
+}
+button.cta {
+    border: none;
+    background-color: var(--primary);
+    color: var(--background);
+    padding: .5rem 5rem;
+    border-radius: 4px;
+}
+button.cta:hover {
+    background-color: var(--background);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+
+}
+/* Section Meet Our Team */
+.team {
+    text-align: center;
+    margin-top: 5rem;
+} 
+.team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.team-card h3 {
+    line-height: 20px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    font-weight: 700;
+}
+.team-card p {
+    line-height: 28px;
+    margin-top: 2.5rem;
+    font-size: 21px;
+}
+.team-pic {
+    border-radius: 50%;
+    height: 196px;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+/* Section Call to Action */
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 7rem 3rem;
+}
+.cta-container div:first-child {
+    order: 2;
+}
+.cta.img {
+    width: 84px;
+}
+/* Footer */
+
+.bold {
+    font-weight: 700;
+    font-size: 21px;
+}
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    background-color: #C4C4C4;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+}
+.footer-info h3{
+    font-weight: 700;
+    font-size: 16px;
+}
+form {
+    display: grid;
+}
+input {
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 4px;
+    color: var(--secondary_text);
+    padding: .5rem 0rem;
+    text-align: center;
+}
+ul.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links a {
+    text-decoration: none;
+    color: var(--primary_text);
+}
+.footer-links a:hover {
+    color: var(--primary);
+}
+.social {
+    margin-top: 2rem;
+    display: flex;
+}
+.social img {
+    margin-right: 2rem;
+}
+.copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #63625B;
+    margin:0;
+    padding:0;
+    color: var(--background);
+    font-size: 1rem;
+    font-weight: 700;
+}
+/* Responsive Styling @400px and up */
+@media only screen and (min-width: 400px) {
+    h1 {
+    font-size: 7vw;
+    }
+    h2 {
+    font-size: 3vw;
+    }
+    header {
+        height: 65vh;
+    }
+  
+     /* Call to Action Section */
+    .cta-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10rem;
+    }
+    .cta-container div:first-child{
+        order: -1;
+    }
+    .cta-text {
+        width: 50vw;
+    }
+    .cta-img {
+        margin-left: 3rem;
+    }
+    /* Footer */
+   .footer-info {
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: space-around;
+       padding-top: 4rem;
+       padding-bottom: 5rem;
+   }
+   .subscribe {
+       align-self: start;
+   }
+   input {
+        padding: 0;
+        height: 40px;
+        width: 343px;
+        text-align: justify;
+    }
+    ::placeholder{
+        text-indent: 1rem;
+    }
+    button.cta-subscribe {
+        height: 40px;
+        width: 344px;
+    }
+}
+/* Responsive Styling 930px and up */
+@media only screen and (min-width: 930px){
+      /* Nav */
+      nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0rem 4rem;
+    }
+    .logo {
+        justify-content: start;
+    }
+    ul.nav-links {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+    .nav-links li {
+        margin-left: 2rem;
+    }
+    /* Header */
+    .about {
+        margin: 0rem 4rem;
+    }
+    h1 {
+        font-size: 37px;
+        }
+        h2 {
+        font-size: 28px;
+        }
+    .team-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .team-card {
+        width: 30%;
+        padding: 3rem;
+    }
+    }
