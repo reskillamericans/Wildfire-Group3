@@ -210,37 +210,15 @@ ul.footer-links {
 /* Responsive Styling @400px and up */
 @media only screen and (min-width: 400px) {
     h1 {
-font-size: 37px;
-}
-h2 {
-font-size: 28px;
-}
+    font-size: 7vw;
+    }
+    h2 {
+    font-size: 3vw;
+    }
     header {
         height: 65vh;
     }
-    /* Nav */
-    nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding: 0rem 4rem;
-    }
-    .logo {
-        justify-content: start;
-    }
-    ul.nav-links {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-    }
-    .nav-links li {
-        margin-left: 2rem;
-    }
-    /* Header */
-    .about {
-        margin: 0rem 4rem;
-    }
-    /* Section Meet our Team */
-   
+  
      /* Call to Action Section */
     .cta-container {
     display: flex;
@@ -283,6 +261,33 @@ font-size: 28px;
 }
 /* Responsive Styling 930px and up */
 @media only screen and (min-width: 930px){
+      /* Nav */
+      nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0rem 4rem;
+    }
+    .logo {
+        justify-content: start;
+    }
+    ul.nav-links {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+    .nav-links li {
+        margin-left: 2rem;
+    }
+    /* Header */
+    .about {
+        margin: 0rem 4rem;
+    }
+    h1 {
+        font-size: 37px;
+        }
+        h2 {
+        font-size: 28px;
+        }
     .team-container {
         display: flex;
         flex-direction: row;
