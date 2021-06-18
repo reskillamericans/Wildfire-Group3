@@ -77,7 +77,7 @@ a.active-link {
 }
 /* Header */
 header {
-    background-image: url("/about-us-images/header-fire.svg");
+    background-image: url("/images/header-fire.svg");
     width: 100%;
     object-fit: cover;
 }
@@ -160,6 +160,8 @@ button.cta:hover {
     display: flex;
     flex-direction: column;
     background-color: #C4C4C4;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .footer-info h3{
     font-weight: 700;
