@@ -157,8 +157,8 @@ button.cta:hover {
     font-size: 21px;
 }
 .footer-info {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     background-color: #C4C4C4;
     padding: 2rem 2rem;
 }
