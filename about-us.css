@@ -81,9 +81,13 @@ a.active-link {
 /* Header */
 header {
     background-image: url("/images/header-fire.svg");
-    height: 592px;
     width: 100%;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
 }
 .about {
     margin: 0 2rem;
