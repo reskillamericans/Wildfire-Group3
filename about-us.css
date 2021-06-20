@@ -44,6 +44,9 @@ p {
 .logo img {
     width: 33px;
 }
+a.logo {
+    text-decoration: none;
+}
 /* Navbar */
 nav{
     display: flex;
@@ -78,8 +81,9 @@ a.active-link {
 /* Header */
 header {
     background-image: url("/images/header-fire.svg");
+    height: 592px;
     width: 100%;
-    object-fit: cover;
+    background-size: cover;
 }
 .about {
     margin: 0 2rem;
@@ -204,10 +208,13 @@ ul.footer-links {
     justify-content: center;
     background-color: #63625B;
     margin:0;
-    padding:0;
+    padding-left: 1rem;
+    padding-left: 1rem;
     color: var(--background);
-    font-size: 1rem;
-    font-weight: 700;
+}
+.copyright p{
+    font-size: 12px;
+    font-weight: 400;
 }
 /* Responsive Styling @400px and up */
 @media only screen and (min-width: 400px) {
@@ -261,6 +268,10 @@ ul.footer-links {
     button.cta-subscribe {
         height: 40px;
         width: 344px;
+    }
+    .copyright p{
+        font-size: 16px;
+        font-weight: 400;
     }
 }
 /* Responsive Styling 930px and up */
