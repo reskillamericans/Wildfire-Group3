@@ -178,6 +178,7 @@ button.cta:hover {
 }
 #newsletter {
     display: grid;
+    justify-content: center;
 }
 #newsletter input {
     margin-bottom: 1rem;
@@ -189,8 +190,8 @@ button.cta:hover {
 }
 ul.footer-links {
     list-style-type: none;
-    /*padding: 0;*/
-    /*margin: 0;*/
+    padding: 0;
+    margin: 0;
 }
 .footer-links li{
     padding: 10px 0;
