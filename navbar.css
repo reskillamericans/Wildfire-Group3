@@ -1,0 +1,132 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    color: #180126;
+  }
+
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  /* NAV BAR */
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: #180126;
+  }
+
+  .brand-title {
+    font-size: 1.5rem ;
+    margin: 1rem;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+  }
+
+  .navbar-links ul {
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
+    text-transform: uppercase;
+    display: flex;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-links li {
+    list-style: none;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom:15px
+  }
+
+  .navbar-links li a:hover {
+    color: #FF624C;
+  }
+
+  .navbar-links li a:active {
+    color: #FF624C;
+  }
+
+  .navbar-links li a {
+    text-decoration: none;
+    color: #180126;
+    font-size: 16px;
+    padding: 1rem;
+    display: block;
+    text-transform: capitalize;
+  }
+
+  .toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    border-color: black;
+    background-color: black;
+    border-radius: 10px;
+    color:
+  }
+
+  @media (max-width: 600px) {
+    .toggle-button {
+      display: flex;
+      margin-top: 25px;
+    }
+
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .navbar-links ul {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .navbar-links li {
+      text-align: center;
+    }
+
+    .navbar-links li a {
+      padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+      display: flex;
+    }
+}
+
+  /* END NAV BAR */
+
+  
