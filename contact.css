@@ -198,22 +198,7 @@ ul.footer-links {
 .copyright p {
     align-self: center;
 }
-/* Responsive Styling @400px and below */
-@media only screen and (max-width: 400px){
-    .footer-info {
-        padding-right: 1rem;
-        padding-bottom: 1rem;
-        justify-content: left;
-    }
-    #contact-form {
-        margin: 15px;
-    }
-    #subscribe-email,
-    .cta-subscribe {
-        width: 220px;
-    }
 
-}
 /* Responsive Styling @400px and up */
 @media only screen and (min-width: 400px) {
     h1 {
@@ -252,35 +237,8 @@ ul.footer-links {
         width: 344px;
     }
 }
-/* Responsive Styling @550px and below */
-@media only screen and (max-width: 550px){
-    .footer-info {
-        padding-right: 1.5rem;
-        padding-bottom: 1.5rem;
-        justify-content: left;
-    }
-    #contact-form {
-        margin: 15px;
-    }
 
-    #subscribe-email,
-    .cta-subscribe {
-        width: 250px;
-    }
 
-}
-/* Responsive Styling 768px and below */
-@media only screen and (max-width: 768px){
-    #contact-form {
-        margin: 30px;
-    }
-    #contact-form button {
-        width: 300px;
-    }
-    #newsletter p {
-        font-size: 16px;
-    }
-}
 /* Responsive Styling 930px and up */
 @media only screen and (min-width: 930px){
       /* Nav */
@@ -302,6 +260,57 @@ ul.footer-links {
     }
 
     }
+
+/* Responsive Styling 768px and below */
+@media only screen and (max-width: 768px){
+    #contact-form {
+        margin: 30px;
+    }
+    #contact-form button {
+        width: 300px;
+    }
+    #newsletter p {
+        font-size: 16px;
+    }
+}
+
+/* Responsive Styling @550px and below */
+@media only screen and (max-width: 550px){
+    .footer-info {
+        padding-right: 1.5rem;
+        padding-bottom: 1.5rem;
+        justify-content: left;
+    }
+    #contact-form {
+        margin: 15px;
+    }
+
+    #subscribe-email,
+    .cta-subscribe {
+        width: 250px;
+    }
+
+}
+/* Responsive Styling @400px and below */
+@media only screen and (max-width: 400px){
+    .footer-info {
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        justify-content: left;
+    }
+    #contact-form {
+        margin: 10px;
+    }
+    #contact-form button {
+        width: 220px;
+    }
+    #subscribe-email,
+    .cta-subscribe {
+        width: 220px;
+    }
+
+}
+
 
 
 
