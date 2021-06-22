@@ -181,6 +181,7 @@ ul.footer-links {
 }
 .social i {
     margin-right: 2rem;
+    width: 21px;
 }
 .copyright {
     display: flex;
