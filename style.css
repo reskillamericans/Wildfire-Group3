@@ -51,10 +51,9 @@ a.logo {
 /* Index CSS */
 .containergrid {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 2rem;
 }
 
 .gridpiece {
@@ -81,7 +80,6 @@ a.logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
 }
 
  /* Hero */
