@@ -73,7 +73,6 @@ a.active-link {
 
 img {
     width: 100%;
-    z-index: -1;
 }
 /******** Contact Form ********/
 #contact-form {
@@ -90,7 +89,7 @@ label {
     padding-top: 15px;
 }
 
-input, textarea {
+#contact-form input, textarea {
     margin: 5px 0;
     padding: 10px;
     background-color: #ECECEC;
@@ -125,7 +124,9 @@ button:hover {
 }
 
 /* Footer */
-
+footer {
+    justify-content: center;
+}
 .bold {
     font-weight: 700;
     font-size: 21px;
@@ -144,6 +145,7 @@ button:hover {
 }
 #newsletter {
     display: grid;
+    justify-content: center;
 }
 #newsletter input {
     margin-bottom: 1rem;
@@ -189,6 +191,10 @@ ul.footer-links {
     color: var(--background);
     font-size: 1rem;
     font-weight: 700;
+}
+
+.copyright p {
+    align-self: center;
 }
 /* Responsive Styling @400px and up */
 @media only screen and (min-width: 400px) {
@@ -256,4 +262,22 @@ ul.footer-links {
     #contact-form {
         margin: 30px;
     }
+    #contact-form button {
+        width: 200px;
+    }
+    #newsletter p {
+        font-size: 16px;
+    }
+
+
+}
+@media only screen and (max-width: 400px){
+    #contact-form {
+        margin: 15px;
+    }
+    #subscribe-email,
+    .cta-subscribe {
+        width: 200px;
+    }
+
 }
