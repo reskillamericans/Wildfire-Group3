@@ -50,18 +50,16 @@ a.logo {
 
 /* Index CSS */
 .containergrid {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 2fr auto;
-  grid-template-columns: 50% 50%;
-  grid-column-gap: 4em;
-  margin-top: 50px;
-  grid-auto-rows: minmax (100px, auto);
-  max-width: 65%;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.gridpiece {
+  width: 50%;
+  margin: auto;
 }
 
 .blurb {
