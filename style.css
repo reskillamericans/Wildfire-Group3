@@ -530,7 +530,7 @@ button.cta-subscribe {
     border-color: black;
     background-color: black;
     border-radius: 10px;
-    color:
+    color: white;
   }
 
   @media (max-width: 600px) {
