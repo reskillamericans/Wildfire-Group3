@@ -39,7 +39,7 @@ a.logo {
 
 nav{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     background-color: #F9F9F9;
     margin: 0;
     padding-top: 1rem;
@@ -91,6 +91,7 @@ ul.nav-links {
 .banner {
     background-image: url("/images/image files/Hero\ photo-\ faq.svg");
     background-size: cover;
+    width: 100%;
     height: 30rem;
 }
 
@@ -325,9 +326,9 @@ ul.footer-links {
  ::placeholder{
      text-indent: 1rem;
  }
- button.cta-subscribe {
+ .cta-subscribe {
      height: 40px;
-     width: 344px;
+     width: 91%;
  }
  
  label {
@@ -368,13 +369,19 @@ button {
 nav {
     display: flex;
     flex-direction: column;
-    margin:auto;
+    margin: 0;
+}
+
+.logo {
+    justify-content: center;
+    width: 100%;
 }
 
 nav .nav-links {
     display: flex;
+    width: 100%;
+    justify-content: space-evenly;
     margin-bottom: 1rem;
-    
 }
 
 .questions p {
@@ -383,18 +390,10 @@ nav .nav-links {
 
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 500px) {
 
-nav {
-   display: flex;
-   align-items: flex-start;
-}
- 
-nav .nav-links {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-        
+main {
+    height: 55rem;
 }
 
 form input {
@@ -424,31 +423,71 @@ form input {
     width: 50%;
 }
 
-#newsletter p {
-    margin: auto;
+.link-left {
+    transform: translate(-4.2rem);
 }
 
-.link-list {
-    padding-top: 1rem;
-    letter-spacing: 1px;
-}
-
-.link-list:nth-last-of-type(2) {
-    transform: translate(1.1rem);
+.link-right{
+    transform: translate(-4.5rem, 1.8rem);
 }
 
 .banner-text p:nth-of-type(2) {
     width: 85%;
 }
 
-nav {
-    transform: translate(-3rem);
-}
-
 .logo {
     font-size: 1.2rem;
 }
 
+.footer-info {
+    height: 55rem;
+}
+
+#newsletter .cta-subscribe {
+    width: 100%;
+}
+
+.footer-links li:nth-of-type(1) {
+    padding-top: 1.5rem;
+}
+
+.social i {
+    transform: translate(0, -2rem);
+}
+
+.bold {
+    font-size: 1rem;
+    text-align: left;
+}
+.copyright p {
+    font-weight: 400;
+}
+
+}
+
+@media only screen and (max-width: 360px) {
+
+.link-left {
+    padding-left: 4.4rem;
+}
+
+.link-right {
+    padding-left: 5rem;
+}
+    
+
+#newsletter input {
+    width: 100%;
+}
+
+.social i {
+    margin-top: 2rem;
+    font-size: 1.5;
+}
+
+.footer-info {
+    height: auto;
+}
 
 }
 
