@@ -130,6 +130,14 @@ label {
 textarea {
     margin-bottom: 30px;
 }
+
+input:focus, textarea:focus {
+    border: 1px solid var(--primary) !important;
+    box-shadow: 0 0 5px var(--primary);
+    outline-offset: 0;
+    outline: none;
+}
+
 sup {
     color: #FF0000;
 }
