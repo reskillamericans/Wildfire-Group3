@@ -68,6 +68,10 @@ p {
     color: #FF8B00;
 }
 
+.active-link {
+    color: var(--primary) !important;
+}
+
 .navbar-links li a {
     text-decoration: none;
     color: #180126;
