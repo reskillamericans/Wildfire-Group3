@@ -107,7 +107,12 @@ img {
     width: 100%;
 }
 
+
 /******** Contact Form ********/
+
+form p {
+    font-size: 22px;
+}
 
 #contact-form {
     margin:  30px 114px;
