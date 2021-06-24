@@ -34,4 +34,4 @@ class FireIncident(models.Model):
     reporter_first_name = models.CharField(max_length=50)
     reporter_last_name = models.CharField(max_length=50)
     reporter_contact_info = models.CharField(max_length=15)
-    incident_image = models.ImageField()
+    # incident_image = models.ImageField()
