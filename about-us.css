@@ -215,6 +215,13 @@ footer {
     font-weight: 700;
     font-size: 21px;
 }
+input:focus,
+input:hover {
+ border: 1px solid var(--primary) !important;
+ box-shadow: 0 0 5px var(--primary);
+ outline-offset: 0;
+ outline: none;
+}
 .footer-info {
     display: flex;
     flex-direction: column;
@@ -370,7 +377,7 @@ ul.footer-links {
         width: 250px;
     }
 }
-
+/* Navbar responsive styling */
 @media (max-width: 600px) {
     .toggle-button {
         display: flex;
