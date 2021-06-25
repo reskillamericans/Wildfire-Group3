@@ -122,6 +122,7 @@ header {
     justify-content: center;
     align-items: center;
     padding-bottom: 3rem;
+    margin-bottom: 175px;
 }
 .about {
     margin: 0 2rem;
@@ -154,7 +155,11 @@ button.cta:hover {
 
 /* Carousel */
 #i1, #i2, #i3, #i4, #i5{ display: none;}
-
+.container h2 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 .team-slide {
     height: inherit;
     display: grid;
