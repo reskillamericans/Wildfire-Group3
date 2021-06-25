@@ -149,14 +149,14 @@ header h1 {
 header h2 {
   line-height: 42px;
 }
-button.cta {
+button {
   border: none;
   background-color: var(--primary);
   color: var(--background);
   padding: .5rem 5rem;
   border-radius: 4px;
 }
-button.cta:hover {
+button:hover {
   background-color: var(--background);
   border: 1px solid var(--primary);
   color: var(--primary);
