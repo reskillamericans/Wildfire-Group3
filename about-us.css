@@ -202,6 +202,7 @@ a.active-link {
 /* Header */ 
 header {
     background-image: url("/images/header-fire.svg");
+    object-fit: cover;
     width: 100%;
     background-size: cover;
     display: flex;
@@ -237,35 +238,15 @@ button.cta:hover {
     color: var(--primary);
 
 }
-/* Section Meet Our Team */
-.team {
-    text-align: center;
-    margin-top: 5rem;
-} 
-.team-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-.team-card h3 {
-    line-height: 20px;
-    margin-bottom: 6px;
-    margin-top: 6px;
-    font-weight: 700;
-}
-.team-card p {
-    line-height: 28px;
-    margin-top: 2.5rem;
-    font-size: 21px;
-}
-.team-pic {
-    border-radius: 50%;
+/* Styling for Carousel */
+.profile-pic img{
+    width: 196px;
     height: 196px;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
 }
+
+
 /* Section Call to Action */
 .cta-container {
     display: flex;

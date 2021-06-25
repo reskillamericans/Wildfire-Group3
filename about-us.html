@@ -56,42 +56,119 @@
             <button class="cta">Get Started</button>
         </div>
     </header>
-    <!-- Meet Our Team -->
-    <section class="team">
-        <h2>Meet Our Team</h2>
-        <div class="team-container">
-            <div class="team-card">
-                <img src="/images/Diana-Park.svg" class="team-pic" alt="Picture of Alana Trim">
-                <h3 class="name">Alana Trim</h3>
-                <h3 class="job-title">Product Manager</h3>
-                <p>Trim ensures that the processes and all facets of the product are user friendly, easily accessible
-                    and
-                    relevant to user needs.</p>
-            </div>
-            <div class="team-card">
-                <img src="/images/Ric-Farlon.svg" class="team-pic" alt="Picture of Ric Farlon">
-                <h3 class="name">Ric Farlon</h3>
-                <h3 class="job-title">Lead Developer</h3>
-                <p>Farlon leads a team of both frontend and backend developers ensuring that the product is fast and
-                    stable.
-                </p>
-            </div>
-            <div class="team-card">
-                <img src="/images/Robert-Hall.svg" class="team-pic" alt="Picture of Philip Hall">
-                <h3 class="name">Philip Hall</h3>
-                <h3 class="job-title">Lead Designer</h3>
-                <p>Leads the UX/UI team in making easy to use interfaces for users and ensuring that all the features
-                    are
-                    easily accessible.</p>
-            </div>
+    <!-- Carousel -->
+    <h2>Meet our Team</h2>
+    <div class="container">
+        <!-- buttons that show slider progress -->
+        <input type="radio" id="i1" name="images" checked />
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+        <input type="radio" id="i4" name="images" />
+    </div>
+    <!-- First Slide -->
+    <div class="slide_img" id="one">
+        <div class="profile-pic">
+            <img src="images/team-images/jadon.png">
+            <h3>Jado’n Miguel Rickenbacker</h3>
+            <h4>UI/UX Designer</h4>
+            <p>Designer of Fire Reporter's mobile app.</p>
         </div>
-    </section>
+        <div class="profile-pic">
+            <img src="images/team-images/collins.png">
+            <h3>Collins Park</h3>
+            <h4>Product Designer</h4>
+            <p>Planning and creating the design and layout of Fire Reporter's website.</p>
+        </div>
+        <div class="profile-pic">
+            <img src="images/team-images/default.png">
+            <h3>Isidro Hernandez</h3>
+            <h4>Front End Developer</h4>
+            <p>Isidro developed the FAQ page. </p>
+        </div>
+        <label class="prev" for="i4"><span>&#x2039;</span></label>
+        <label class="next" for="i2"><span>&#x203a;</span></label>
+    </div>
+    <!-- Second Slide -->
+    <div class="slide_img" id="two">
+        <div class="profile-pic">
+            <img src="images/team-images/amy.JPG">
+            <h3>Amy Funderberg</h3>
+            <h4>Front End Developer</h4>
+            <p>Amy developed the website's Contact page.</p>
+        </div>
+        <div class="profile-pic">
+            <img src="images/team-images/default.png">
+            <h3>Sammy Elfatrany</h3>
+            <h4>Front End Developer</h4>
+            <p>Sammy developed the website's Landing page.</p>
+        </div>
+        <div class="profile-pic">
+            <img src="images/team-images/dinah.jpg">
+            <h3>Dinah Brito</h3>
+            <h4>Front End Developer</h4>
+            <p>Dinah developed the website's About Us page.</p>
+        </div>
+        <label class="prev" for="i1"><span>&#x2039;</span></label>
+        <label class="next" for="i3"><span>&#x203a;</span></label>
+    </div>
+    <!-- Third Slide -->
+    <div class="slide_img" id="three">
+        <div class="profile-pic">
+            <img src="images/team-images/default.png">
+            <h3>Gabriel Fuentes</h3>
+            <h4>Back End Developer</h4>
+            <p>Gabriel developed the back end functionality for the website.</p>
+        </div>
+        <div class="profile-pic">
+            <img src="images/team-images/rolando.JPG">
+            <h3>Rolando Aniel</h3>
+            <h4>Mobile Developer</h4>
+            <p>Rolando helped develop the mobile app and seed data into Firebase.</p>
+        </div>
+        <div class="profile-pic">
+            <img src="images/team-images/anya.jpg">
+            <h3>Mbah Anya Sunday</h3>
+            <h4>Mobile Developer</h4>
+            <p>Mbah developed the Register/Sign up page for the mobile app.</p>
+        </div>
+        <label class="prev" for="i2"><span>&#x2039;</span></label>
+        <label class="next" for="i4"><span>&#x203a;</span></label>
+    </div>
+    <!-- Slide 4 -->
+    <div class="slide_img" id="four">
+        <div class="profile-pic">
+            <img src="images/team-images/leilani.JPG">
+            <h3>Leilani Allen</h3>
+            <h4>Mobile Developer</h4>
+            <p>Leilani developed the Homepage for the mobile app.</p>
+        </div>
+        <div class="profile-pic">
+            <img src="images/team-images/amani.jpg">
+            <h3>Amani Pitts</h3>
+            <h4>Mobile Developer</h4>
+            <p>Amani developed the Splash and Onboarding screen for the mobile app.</p>
+        </div>
+
+        <label class="prev" for="i3"><span>&#x2039;</span></label>
+        <label class="next" for="i1"><span>&#x203a;</span></label>
+    </div>
+
+    </div>
+    </div>
+
     <!-- Call To Action Section -->
     <div class="cta-container">
         <div class="cta-text">
             <h2>Find the most accurate news about fire outbreaks or simply share that information with us.</h2>
         </div>
         <div class="cta-img"><img src="images/fire-vector.svg" alt="Fire Icon">
+        </div>
+        <div class="slide_img" id="two">
+
+
+            <label class="prev" for="i1"><span>&#x2039;</span></label>
+            <label class="next" for="i3"><span>&#x203a;</span></label>
+
         </div>
     </div>
     <!-- Footer -->
