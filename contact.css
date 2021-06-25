@@ -41,7 +41,7 @@ p {
 }
 
 .brand-title img {
-    width: 200px;
+    width: 150px;
 }
 
 .navbar-links ul {
@@ -57,7 +57,6 @@ p {
     list-style: none;
     font-weight: bolder;
     text-transform: uppercase;
-    margin: 5px;
 }
 
 .navbar-links li a:hover {
@@ -160,7 +159,6 @@ button {
     border: none;
     border-radius: 5px;
     padding: 10px 70px;
-    margin: 15px 0;
     width: 343px;
 }
 
@@ -301,9 +299,6 @@ ul.footer-links {
         flex-wrap: nowrap;
         justify-content: flex-end;
     }
-    .nav-links li {
-        margin-left: 2rem;
-    }
 
 }
 
@@ -324,11 +319,11 @@ ul.footer-links {
     .toggle-button {
         display: flex;
         width: 25px;
-        margin: 25px;
+        margin: 15px 20px;
     }
     .brand-title img {
         width: 150px;
-        margin: 10px 20px;
+        margin: 0 15px;
     }
     .navbar-links {
         display: none;
