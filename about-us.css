@@ -150,12 +150,127 @@ button.cta:hover {
     color: var(--primary);
 
 }
-/* Styling for Carousel */
+
+
+/* Carousel */
+.container {
+	margin: 75px auto;
+	margin-top: 0px;
+	position: relative;
+	width: 85%;
+	height: 0;
+	padding-bottom: 40%;
+	background: #ffffff;
+    text-align: center;
+}
+.container h2{
+    margin-bottom: 62px;
+    margin-top: 175px;
+}
+.profile-pic {
+    width: 85%;
+    justify-content: space-around;
+}
+
 .profile-pic img{
     width: 196px;
     height: 196px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.slide_img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#i1,
+#i2,
+#i3,
+#i4 {
+	display: none;
+}
+
+.prev,
+.next {
+	width: 49px;
+	height: 85px;
+	position: absolute;
+	top: 0;
+	z-index: 99;
+	cursor: pointer;
+}
+
+.prev {
+	left: 0;
+	background-image: url(images/team-images/left.svg);
+	background-size: 40%;
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-left: -50px;
+    margin-top: 150px;
+}
+
+.next {
+	right: 0;
+	background-image: url(images/team-images/right.svg);
+	background-size: 40%;
+	background-repeat: no-repeat;
+	background-position: right center;
+	margin-right: -50px;
+    margin-top: 150px;
+}
+
+.nav_slide {
+	width: 100%;
+	height: 11px;
+	bottom: 12%;
+	position: absolute;
+	text-align: center;
+	z-index: 99;
+}
+
+.dots {
+	top: 30px;
+	width: 18px;
+	height: 18px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 50%;
+	display: inline-block;
+	background: #b8b4b4;
+}
+
+.slide_img {
+	z-index: -1;
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three,
+#i4:checked ~ #four {
+	z-index: 9;
+}
+
+#i1:checked ~ .nav #dot1,
+#i2:checked ~ .nav #dot2,
+#i3:checked ~ .nav #dot3,
+#i4:checked ~ .nav #dot4 {
+	background: black;
+}
+
+#one,
+#two,
+#three,
+#four {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 5rem;
+}
+
+.profile-pic {
+	background-color: #ffffff;
 }
 
 
