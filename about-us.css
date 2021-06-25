@@ -153,94 +153,127 @@ button.cta:hover {
 
 
 /* Carousel */
-.container {
-	margin: 75px auto;
-	margin-top: 0px;
-	position: relative;
-	width: 85%;
-	height: 0;
-	padding-bottom: 40%;
-	background: #ffffff;
-    text-align: center;
-}
-.container h2{
-    margin-bottom: 62px;
-    margin-top: 175px;
-}
-.profile-pic {
-    width: 85%;
+#i1, #i2, #i3, #i4, #i5{ display: none;}
+
+.team-slide {
+    height: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-around;
-    background-color: white;
+    align-items: center;
+    column-gap: 4rem;
+    text-align: center;
+    background: white;
 }
-.profile-pic img{
-    width: 196px;
-    height: 196px;
+
+.profile-card {
+    background: white;
+}
+.profile-card img{
     object-fit: cover;
     border-radius: 50%;
 }
+.container{
+		margin: 0 auto;
+		margin-top: 20px;
+		position: relative;
+		width: 70%;
+		height: 0;
+		padding-bottom: 38%;
+	    user-select: none;
+		border-radius:10px ; 
+	}
 
-.slide_img {
-	position: absolute;
+	.container .slide_img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+
+	 .prev, .next{
+		width: 5%;
+		height: inherit;
+		position: absolute;
+		top:0; 
+		z-index: 99;
+		cursor: pointer;
+	}
+
+	.next {
+        right:0;
+        background-image: url(images/team-images/right.svg);
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: right center;
+        margin-right: -50px;
+    }
+	.prev {
+        left:0;
+        background-image: url(images/team-images/left.svg);
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: left center;
+        margin-left: -50px;
+    }
+
+	label span{
+		position: absolute;
+		font-size: 100pt;
+		top: 50%;
+	 	transform: translateY(-50%);
+	}
+
+
+.container #nav_slide{
 	width: 100%;
-	height: 100%;
-}
-
-#i1,
-#i2,
-#i3,
-#i4 {
-	display: none;
-}
-
-.prev,
-.next {
-	width: 49px;
-	height: 85px;
+	bottom: 5%;
+	height: 11px;
 	position: absolute;
-	top: 0;
+	text-align: center;
 	z-index: 99;
+	cursor: default;
+}
+
+#nav_slide .dots{
+	top: -5px;
+	width: 18px;
+	height: 18px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+	transition: .4s;
+}
+
+#nav_slide .dots:hover {
 	cursor: pointer;
+	background-color: #B8B4B4;;
 }
 
-.prev {
-	left: 0;
-	background-image: url(images/team-images/left.svg);
-	background-size: 40%;
-	background-repeat: no-repeat;
-	background-position: left center;
-	margin-left: -50px;
-    margin-top: 150px;
-}
+.slide_img{z-index: -1;}
 
-.next {
-	right: 0;
-	background-image: url(images/team-images/right.svg);
-	background-size: 40%;
-	background-repeat: no-repeat;
-	background-position: right center;
-	margin-right: -50px;
-    margin-top: 150px;
-}
+	#i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four  
+	{
+        z-index: 9; animation: scroll 0s ease-in-out;
+    }
 
-.slide_img {
-	z-index: -1;
-}
+	#i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3,
+	#i4:checked  ~  #nav_slide #dot4
+	{ 
+        background-color: #B8B4B4;
+    }
 
-#i1:checked ~ #one,
-#i2:checked ~ #two,
-#i3:checked ~ #three,
-#i4:checked ~ #four {	
-    z-index: 9;
-}
-
-#one,
-#two,
-#three,
-#four {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-}
-
+@keyframes scroll{
+	0%{	opacity:.4;}
+	100%{opacity:1;}
+}		
 
 /* Section Call to Action */
 .cta-container {
@@ -533,4 +566,69 @@ ul.footer-links {
         margin: 15px 0;
         width: 343px;
     }
+
+/* responsive styling for carousel */
+@media screen and (max-width: 375px){
+	.container{
+		border: none;
+		width: 70%;
+		height: 0;
+		padding-bottom: 55%; 
+	}	
+	label span { font-size: 50pt; }
+	.prev, .next{
+		width: 10%;
+	}	
+	#nav_slide .dots{
+		width: 12px;
+		height: 12px;
+	}
+    .team-slide {
+        column-gap: 1rem;
+    }
+   
+    .profile-card h3, .profile-card h4 {
+        font-size: 8px;
+    }
+    .profile-card p {
+        display: none;
+    }
+    .profile-card img{
+        width: 70%;
+    }
+}
+/* */
+@media screen and (max-width: 1100px){
+	.container{
+		border: none;
+		width: 70%;
+		height: 0;
+		padding-bottom: 55%; 
+	}	
+	
+	label span { font-size: 50pt; }
+	
+	.prev, .next{
+		width: 10%;
+	}	
+	#nav_slide .dots{
+		width: 12px;
+		height: 12px;
+	}
+    .team-slide {
+        column-gap: 1rem;
+    }
+    
+    .profile-card h3, .profile-card h4 {
+        font-size: 12px;
+    }
+
+    .profile-card p {
+        display: none;
+    }
+    .profile-card img{
+        width: 70%;
+    }
+}    
+
 
