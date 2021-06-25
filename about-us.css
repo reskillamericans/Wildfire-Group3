@@ -33,22 +33,6 @@ p {
     font-weight: 400;
     line-height: 20px;
 }
-/* Logo */
-.logo {
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    color: #180126;
-    font-size: 1rem;
-}
-.logo img {
-    width: 33px;
-}
-a.logo {
-    text-decoration: none;
-}
-
- 
 
 * {
     box-sizing: border-box;
@@ -71,6 +55,10 @@ a.logo {
     font-weight: bolder;
   }
 
+  .brand-title img {
+    width: 200px;
+}
+
   .navbar-links ul {
     margin: 0;
     padding: 0;
@@ -79,20 +67,12 @@ a.logo {
     display: flex;
   }
 
-  ul {
-    margin: 0;
-    padding: 0;
-  }
 
   .navbar-links li {
     list-style: none;
     font-weight: bolder;
     text-transform: uppercase;
-  }
-
-  li {
-    list-style: none;
-    margin-bottom:15px
+    margin: 5px;
   }
 
   .navbar-links li a:hover {
@@ -131,40 +111,7 @@ a.logo {
   }
 
 
-  @media (max-width: 600px) {
-    .toggle-button {
-      display: flex;
-      margin-top: 25px;
-    }
-
-    .navbar-links {
-      display: none;
-      width: 100%;
-    }
-
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .navbar-links ul {
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .navbar-links li {
-      text-align: center;
-    }
-
-    .navbar-links li a {
-      padding: .5rem 1rem;
-    }
-
-    .navbar-links.active {
-      display: flex;
-    }
-
-} 
+  
 
 /* Navbar 
 nav{
@@ -424,6 +371,43 @@ ul.footer-links {
     }
 }
 
+@media (max-width: 600px) {
+    .toggle-button {
+        display: flex;
+        width: 25px;
+        margin: 25px;
+    }
+    .brand-title img {
+        width: 150px;
+        margin: 10px 20px;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
 /* Responsive Styling 930px and up */
 @media only screen and (min-width: 930px){
       /* Nav */
