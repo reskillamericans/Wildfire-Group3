@@ -44,7 +44,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--background);
+    background-color: white;
     color: var(--primary_text);
   }
 
@@ -170,8 +170,8 @@ button.cta:hover {
 .profile-pic {
     width: 85%;
     justify-content: space-around;
+    background-color: white;
 }
-
 .profile-pic img{
     width: 196px;
     height: 196px;
@@ -222,26 +222,6 @@ button.cta:hover {
     margin-top: 150px;
 }
 
-.nav_slide {
-	width: 100%;
-	height: 11px;
-	bottom: 12%;
-	position: absolute;
-	text-align: center;
-	z-index: 99;
-}
-
-.dots {
-	top: 30px;
-	width: 18px;
-	height: 18px;
-	margin: 0 4px;
-	position: relative;
-	border-radius: 50%;
-	display: inline-block;
-	background: #b8b4b4;
-}
-
 .slide_img {
 	z-index: -1;
 }
@@ -249,15 +229,8 @@ button.cta:hover {
 #i1:checked ~ #one,
 #i2:checked ~ #two,
 #i3:checked ~ #three,
-#i4:checked ~ #four {
-	z-index: 9;
-}
-
-#i1:checked ~ .nav #dot1,
-#i2:checked ~ .nav #dot2,
-#i3:checked ~ .nav #dot3,
-#i4:checked ~ .nav #dot4 {
-	background: black;
+#i4:checked ~ #four {	
+    z-index: 9;
 }
 
 #one,
@@ -266,11 +239,6 @@ button.cta:hover {
 #four {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	column-gap: 5rem;
-}
-
-.profile-pic {
-	background-color: #ffffff;
 }
 
 
@@ -565,3 +533,4 @@ ul.footer-links {
         margin: 15px 0;
         width: 343px;
     }
+
