@@ -111,41 +111,6 @@ p {
   }
 
 
-  
-
-/* Navbar 
-nav{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--background);
-    margin: 0;
-    padding-top: 1rem;
-}
-.logo {
-    justify-content: center;
-    width: 100%;
-}
-ul.nav-links {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    list-style-type: none;
-    font-weight: 700;
-    width: 100%;
-    padding: 0;
-}
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary_text);
-}
-a.active-link {
-    color: var(--primary);
-}
-.nav-links a:hover {
-    color: var(--primary);
-}
-*/ 
-
 /* Header */ 
 header {
     background-image: url("/images/header-fire.svg");
