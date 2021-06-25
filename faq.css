@@ -22,68 +22,92 @@ body {
 }
 
 /* navbar */
-    
-.logo {
+
+.navbar {
+    height: 8vh;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-weight: 700;
+    background-color: white;
     color: #180126;
-    font-size: 1rem;
-}
-.logo img {
-    width: 33px;
-}
-a.logo {
-    text-decoration: none;
+  }
+
+.navbar img {
+    margin-left: 4rem;
 }
 
-nav{
+.brand-title {
+    font-size: 1.5rem ;
+    margin: 1rem;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.navbar-links ul {
+    margin-right: 2rem;
+    padding: 0;
+    font-weight: bolder;
+    text-transform: uppercase;
     display: flex;
-    flex-wrap: nowrap;
-    background-color: #F9F9F9;
+}
+
+ul {
     margin: 0;
-    padding-top: 1rem;
-}
-.logo {
-    justify-content: center;
-    width: 100%;
-    transform: translate(0, -.5rem);
-}
-ul.nav-links {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    list-style-type: none;
-    font-weight: 700;
-    width: 100%;
     padding: 0;
 }
-.nav-links a {
-    text-decoration: none;
-    color: #333333;
-}
-a.active-link {
-    color: #FF8B00;
-}
-.nav-links a:hover {
-    color: #FF8B00;
+
+.navbar-links li {
+    margin-right: 1.5rem;  
+    margin-top: 1rem;
+    list-style: none;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
-nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 0rem 4rem;
+.active-link {
+    color: #FF8B00 !important;
 }
-.logo {
-    justify-content: start;
+
+li {
+    list-style: none;
+    margin-bottom:15px
 }
-ul.nav-links {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
+
+.navbar-links li a:hover {
+    color: #FF624C;
 }
-.nav-links li {
-    margin-left: 2rem;
+
+.navbar-links li a:active {
+    color: #FF624C;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #180126;
+    font-size: 16px;
+    padding: 1rem;
+    display: block;
+    text-transform: capitalize;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    border-color: black;
+    background-color: black;
+    border-radius: 10px;
+
 }
 
 /* banner section */
@@ -174,9 +198,13 @@ main h1 {
     padding-top: 4rem;
 }
 
-.images a {
+.images img {
     padding-top: 4rem;
     display: block;
+}
+
+.images img:hover {
+    cursor: pointer;
 }
 
 .download {
@@ -206,8 +234,14 @@ main h1 {
     background-color: #F9F9F9;
     color: #FF8B00;
     cursor: pointer;
-    border: 2px solid #FF8B00;
+    border: 1px solid #FF8B00;
 }
+
+.active {
+    display: none;
+}
+
+
 
 /* footer */
 
@@ -268,10 +302,10 @@ ul.footer-links {
 
 .footer-links a {
     text-decoration: none;
-    color: var(--primary_text);
+    color: #333333;
 }
 .footer-links a:hover {
-    color: var(--primary);
+    color: #FF8B00;
 }
 .social {
     margin-top: 2rem;
@@ -300,7 +334,7 @@ ul.footer-links {
 .cta-subscribe:hover {
     background-color: #F9F9F9;
     color:#FF8B00;
-    border: 2px solid #FF8B00;
+    border: 1px solid #FF8B00;
 }
 
 .footer-info {
@@ -362,35 +396,69 @@ button {
     width: 343px;
 }
 
+input:focus,
+input:hover {
+ border: 1px solid #FF8B00 !important;
+ box-shadow: 0 0 5px #FF8B00;
+ outline-offset: 0;
+ outline: none;
+}
+
 /* responsive styles */
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px){   
 
-nav {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+.navbar-links li {
+    margin-left: -2rem;
 }
 
-.logo {
-    justify-content: center;
-    width: 100%;
+.navbar img {
+    margin-left: .5rem;
 }
-
-nav .nav-links {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    margin-bottom: 1rem;
-}
-
+    
 .questions p {
     width: 70%;
+}
+
+.images img {
+    padding-bottom: 1rem;
 }
 
 }
 
 @media only screen and (max-width: 500px) {
+
+.toggle-button {
+    display: flex;
+    margin-top: 13px;
+}
+  
+.navbar-links {
+    display: none;
+    width: 100%;
+}
+  
+.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+}
+  
+.navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+}
+  
+.navbar-links li {
+    text-align: center;
+}
+  
+.navbar-links li a {
+    padding: .5rem 1rem;
+}
+  
+.navbar-links.active {
+    display: flex;
+}
 
 main {
     height: 55rem;
@@ -409,7 +477,7 @@ form input {
     width: 70%;
 }
 
-.images a {
+.images img {
     padding-bottom: 2.3rem;
 }
 
@@ -440,7 +508,7 @@ form input {
 }
 
 .footer-info {
-    height: 55rem;
+    height: 67rem;
 }
 
 #newsletter .cta-subscribe {
