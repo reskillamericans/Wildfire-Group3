@@ -22,50 +22,83 @@ p {
     font-weight: 400;
     line-height: 20px;
 }
-/* Logo */
-.logo {
+
+/* NAV BAR */
+
+.navbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-weight: 700;
+    background-color: white;
     color: #180126;
-    font-size: 1rem;
 }
-.logo img {
-    width: 33px;
+
+.brand-title {
+    font-size: 1.5rem ;
+    margin: 1rem;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
-/* Navbar */
-nav{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--background);
+
+.brand-title img {
+    width: 200px;
+}
+
+.navbar-links ul {
     margin: 0;
-    padding-top: 1rem;
-}
-a {
-    text-decoration: none;
-}
-.logo {
-    justify-content: center;
-    width: 100%;
-}
-ul.nav-links {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    list-style-type: none;
-    font-weight: 700;
-    width: 100%;
     padding: 0;
+    font-weight: bolder;
+    text-transform: uppercase;
+    display: flex;
 }
-.nav-links a {
+
+
+.navbar-links li {
+    list-style: none;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.navbar-links li a:hover {
+    color: #FF8B00;
+}
+
+.navbar-links li a:active {
+    color: #FF8B00;
+}
+
+.active-link {
+    color: var(--primary) !important;
+}
+
+.navbar-links li a {
     text-decoration: none;
-    color: var(--primary_text);
+    color: #180126;
+    font-size: 16px;
+    padding: 1rem;
+    display: block;
+    text-transform: capitalize;
 }
-a.active-link {
-    color: var(--primary);
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
 }
-.nav-links a:hover {
-    color: var(--primary);
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    border-color: black;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
 }
 
 /******** Hero Image ********/
@@ -73,7 +106,14 @@ a.active-link {
 img {
     width: 100%;
 }
+
+
 /******** Contact Form ********/
+
+form p {
+    font-size: 22px;
+}
+
 #contact-form {
     margin:  30px 114px;
     padding: 15px 30px;
@@ -99,6 +139,17 @@ label {
 textarea {
     margin-bottom: 30px;
 }
+
+input:focus,
+textarea:focus,
+input:hover,
+textarea:hover {
+    border: 1px solid var(--primary) !important;
+    box-shadow: 0 0 5px var(--primary);
+    outline-offset: 0;
+    outline: none;
+}
+
 sup {
     color: #FF0000;
 }
@@ -112,6 +163,7 @@ button {
     margin: 15px 0;
     width: 343px;
 }
+
 button:hover {
     background-color: var(--background);
     border: 1px solid var(--primary);
@@ -123,6 +175,7 @@ button:hover {
 }
 
 /* Footer */
+
 footer {
     justify-content: center;
 }
@@ -153,7 +206,7 @@ footer {
     border: none;
     border-radius: 4px;
     color: var(--secondary_text);
-    padding: .5rem 0rem;
+    padding: .5rem 0;
     text-align: center;
 }
 ul.footer-links {
@@ -201,12 +254,6 @@ ul.footer-links {
 
 /* Responsive Styling @400px and up */
 @media only screen and (min-width: 400px) {
-    h1 {
-    font-size: 7vw;
-    }
-    h2 {
-    font-size: 3vw;
-    }
 
     /* Footer */
    .footer-info {
@@ -238,14 +285,13 @@ ul.footer-links {
     }
 }
 
-
 /* Responsive Styling 930px and up */
 @media only screen and (min-width: 930px){
       /* Nav */
       nav {
         display: flex;
         flex-wrap: nowrap;
-        padding: 0rem 4rem;
+        padding: 0 4rem;
     }
     .logo {
         justify-content: start;
@@ -259,7 +305,7 @@ ul.footer-links {
         margin-left: 2rem;
     }
 
-    }
+}
 
 /* Responsive Styling 768px and below */
 @media only screen and (max-width: 768px){
@@ -271,6 +317,44 @@ ul.footer-links {
     }
     #newsletter p {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .toggle-button {
+        display: flex;
+        width: 25px;
+        margin: 25px;
+    }
+    .brand-title img {
+        width: 150px;
+        margin: 10px 20px;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
     }
 }
 

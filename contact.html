@@ -11,27 +11,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/ico" href="images/fire-reporter-logo.ico">
     <script src="https://kit.fontawesome.com/21d1f09dfc.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <!-- Nav -->
     <header>
-        <nav>
-            <a href="index.html" class="logo"><img src="images/fire-reporter-logo.svg" alt="Fire Reporter Logo">Fire Reporter</a>
-            <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about-us.html" >ABOUT</a></li>
-                <li><a href="contact.html" class="active-link">CONTACT</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="brand-title"><img src="images/fire-reporter-logo.png"></div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about-us.html" >ABOUT</a></li>
+                    <li><a href="contact.html" class="active-link">CONTACT</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <section class="main">
-        <section>
+        <section class="main-image">
             <img src="images/contact-images/customer.svg" alt="Customer service">
         </section>
-
         <form id="contact-form" action="#">
+            <p>Enter Your Details</p>
             <label for="contact-first-name">First Name<sup>*</sup></label>
             <input id="contact-first-name" type="text" name="firstname" required><br>
             <label for="contact-last-name">Last Name<sup>*</sup></label>
@@ -62,7 +70,7 @@
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Customer Service Charter</a></li>
                     <li><a href="#">Annual Reports</a></li>
-                    <li><a href="#">Frequently Asked Questions</a></li>
+                    <li><a href="faq.html">Frequently Asked Questions</a></li>
                 </ul>
             </div>
             <div class="link-list">
