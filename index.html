@@ -1,104 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>Wildfire App</title>
-	<link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/ico" href="images/fire-reporter-logo.ico">
-    <script src="https://kit.fontawesome.com/21d1f09dfc.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8" />
+    <title>Wildfire App</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/ico" href="images/fire-reporter-logo.ico" />
+    <script
+      src="https://kit.fontawesome.com/21d1f09dfc.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="navbar">
-        <div class="brand-title"><img src="images/fire-reporter-logo.png"></div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul class="nav-links">
-                <li><a href="index.html" class="active-link">HOME</a></li>
-                <li><a href="about-us.html" >ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </div>
+      <div class="brand-title"><img src="images/fire-reporter-logo.png" /></div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active-link">HOME</a></li>
+          <li><a href="about-us.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
     </nav>
     <div class="c-hero">
-        <div class="c-hero__content">
-          <h1 class="c-hero__headline">We  are committed to being Simple, Fast and Reliable
-            We do it For You!</h1>
-            <button class="buttonorange">Read More</button>
+      <div class="c-hero__content">
+        <h1 class="c-hero__headline">
+          We are committed to being Simple, Fast and Reliable We do it For You!
+        </h1>
+        <button class="buttonorange">Read More</button>
+      </div>
+
+      <div class="c-hero__img-container"></div>
+    </div>
+    <div class="containergrid">
+      <div class="gridpiece">
+        <img
+          class="centerimg"
+          width="65%"
+          src="images/Mobileapp.png"
+          width="350px"
+        />
+      </div>
+      <div class="gridpiece">
+        <h2>Do You Have News About Fire? Go to FireReporter App</h2>
+        <p>
+          The FireReporter is here to receive and give your timely, accurate and
+          reliable information in the event of fire outbreaks - anywhere in the
+          world. Our main focus is to provide information that will save lives,
+          property and environment.
+        </p>
+      </div>
+
+      <div class="gridpiece">
+        <h2>
+          When we come together, we keep each other safe from fire tragedies.
+        </h2>
+        <p class="blurb">
+          Let poeple know what is happenning around you. Share fire outbreak
+          news and safety information with your loved ones, friends and the
+          world. Be our hero today!
+        </p>
+      </div>
+      <div class="gridpiece">
+        <p>
+          <center><strong>Download Our Mobile App.</strong></center>
+        </p>
+        <img
+          class="centerimg"
+          src="images/DownloadAppStore.png"
+          width="200px"
+        /><br />
+        <img
+          class="centerimg"
+          src="images/DownloadGooglePlay.png"
+          width="200px"
+        />
+      </div>
+    </div>
+    <footer>
+      <div class="footer-info">
+        <form id="newsletter">
+          <p class="bold">Want to join our Membership team?</p>
+          <p>Subscribe to our newsletter</p>
+          <input
+            type="email"
+            id="subscribe-email"
+            name="email"
+            placeholder="Enter Your Email"
+          />
+          <button class="cta cta-subscribe">Subscribe</button>
+        </form>
+        <div class="link-list">
+          <ul class="footer-links">
+            <li>About Us</li>
+            <li><a href="#">Leadership</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Customer Service Charter</a></li>
+            <li><a href="#">Annual Reports</a></li>
+            <li><a href="#">Frequently Asked Questions</a></li>
+          </ul>
         </div>
-
-        <div class="c-hero__img-container">
-
-
-            
+        <div class="link-list">
+          <ul class="footer-links">
+            <li>More</li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Data Privacy Statement</a></li>
+            <li><a href="#">Follow Us on Twitter</a></li>
+            <li><a href="#">Follow Us on Facebook</a></li>
+            <li class="social">
+              <a href="#"><i class="fab fa-facebook-square icon"></i></a>
+              <a href="#"><i class="fab fa-twitter-square icon"></i></a>
+              <a href="#"><i class="fab fa-youtube-square icon"></i></a>
+              <a href="#"><i class="fab fa-instagram-square icon"></i></a>
+            </li>
+          </ul>
         </div>
       </div>
-        <div class="containergrid">
-        
-                <div class="gridpiece">
-                    <img class ="centerimg" width="65%" src="images/Mobileapp.png" width="350px">
-                </div>
-                <div class="gridpiece">
-                    <p class="blurbright"><strong>Do You Have News About Fire?
-                        Go to FireReporter App</strong></p>
-                    <p class="blurbright">The FireReporter is here to receive and give your timely, accurate and reliable information in the event of fire outbreaks - anywhere in the world. Our main focus is to provide information that will save lives, property and environment.</p>
-                </div>
-
-                <div class="gridpiece">
-                    <p class="blurb"><strong>When we come together, we keep each other safe from fire tragedies.</strong></p>
-                    <p class="blurb">Let poeple know what is happenning around you. Share fire outbreak news and safety information with your loved ones, friends and the world.  Be our hero today!</p>
-                </div>
-                <div class="gridpiece">
-                    <p><center><strong>Download Our Mobile App.</strong></center></p>
-                    <img class ="centerimg" src="images/DownloadAppStore.png" width="200px"><br />
-                    <img class ="centerimg" src="images/DownloadGooglePlay.png" width="200px">
-                </div>
-            
-        </div>
-        <footer>
-            <div class="footer-info">
-                <form id="newsletter">
-                    <p class="bold">Want to join our Membership team?</p>
-                    <p>Subscribe to our newsletter</p>
-                    <input type="email" id="subscribe-email" name="email" placeholder="Enter Your Email">
-                    <button class="cta cta-subscribe">Subscribe</button>
-                </form>
-                <div class="link-list">
-                    <ul class="footer-links">
-                        <li>About Us</li>
-                        <li><a href="#">Leadership</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Customer Service Charter</a></li>
-                        <li><a href="#">Annual Reports</a></li>
-                        <li><a href="#">Frequently Asked Questions</a></li>
-                    </ul>
-                </div>
-                <div class="link-list">
-                    <ul class="footer-links">
-                        <li>More</li>
-                        <li><a href="#">Terms and Conditions</a></li>
-                        <li><a href="#">Data Privacy Statement</a></li>
-                        <li><a href="#">Follow Us on Twitter</a></li>
-                        <li><a href="#">Follow Us on Facebook</a></li>
-                        <li class="social">
-                            <a href="#"><i class="fab fa-facebook-square icon"></i></a>
-                            <a href="#"><i class="fab fa-twitter-square icon"></i></a>
-                            <a href="#"><i class="fab fa-youtube-square icon"></i></a>
-                            <a href="#"><i class="fab fa-instagram-square icon"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Copyright 2021 FireReporter. All Rights Reserved.</p>
-            </div>
-        </footer>
-</body>
+      <div class="copyright">
+        <p>Copyright 2021 FireReporter. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
