@@ -228,11 +228,13 @@ footer {
     border-radius: 4px;
     color: var(--secondary_text);
     padding: .5rem 0;
-    text-align: center;
+    /*text-align: center;*/
+    text-indent: 1rem;
 }
 ::placeholder{
     text-indent: 1rem;
 }
+
 ul.footer-links {
     list-style-type: none;
     padding: 0;
@@ -300,9 +302,7 @@ ul.footer-links {
         width: 343px;
         text-align: justify;
     }
-    ::placeholder{
-        text-indent: 1rem;
-    }
+
     button.cta-subscribe {
         height: 40px;
         width: 344px;
