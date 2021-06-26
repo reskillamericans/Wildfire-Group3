@@ -115,11 +115,6 @@ a.logo {
   .c-hero__headline {
     width: 80% !important;
   }
-
-  .containergrid {
-    grid-template-columns: 100%;
-    max-width: 80%;
-  }
 }
 
 .c-hero__headline {
@@ -142,7 +137,6 @@ a.logo {
   width: 100%;
   height: 100%;
 }
-
 /* END Hero */
 
 /*END Index CSS */
@@ -299,11 +293,28 @@ ul.footer-links {
 }
 /* Responsive Styling @400px and up */
 @media only screen and (min-width: 400px) {
+  .containergrid {
+    display: block;
+    width: 100%;
+  }
+
   h1 {
     font-size: 7vw;
   }
   h2 {
-    font-size: 3vw;
+    font-size: 4vw;
+    line-height: 30px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .centerimg {
+    width: 100%;
+  }
+
+  p {
+    font-size: 21px;
+    line-height: 28px;
   }
   header {
     height: 73vh;
