@@ -102,18 +102,17 @@ p {
 
 /******** Hero Image ********/
 
-img {
+.main-image img {
     width: 100%;
+    min-height: 588px;
 }
 .main-image {
-    display: flex;
+    overflow: hidden;
     position: relative;
     text-align: center;
     color: white;
 }
 .image-text {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -121,12 +120,12 @@ img {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 37px;
     font-weight: 700;
 }
 
 .image-text p {
-    font-size: 1.5rem;
+    font-size: 28px;
     font-weight: 400;
     line-height: 1;
 }
@@ -231,6 +230,9 @@ footer {
     padding: .5rem 0;
     text-align: center;
 }
+::placeholder{
+    text-indent: 1rem;
+}
 ul.footer-links {
     list-style-type: none;
     padding: 0;
@@ -306,6 +308,12 @@ ul.footer-links {
         width: 344px;
     }
 }
+@media all and (max-width: 1600px) {
+    .main-image img {
+        width: auto;
+        /*min-height: 588px;*/
+    }
+}
 
 /* Responsive Styling 930px and up */
 @media only screen and (min-width: 930px){
@@ -323,17 +331,21 @@ ul.footer-links {
         flex-wrap: nowrap;
         justify-content: flex-end;
     }
+    .main-image image {
+        width: 100% !important;
+
+    }
 
 }
 
 /* Responsive Styling 768px and below */
 @media only screen and (max-width: 768px){
     h1 {
-        font-size: 1rem;
+        font-size: 1.75rem;
     }
 
     .image-text p {
-        font-size: 1rem;
+        font-size: 1.75rem;
 
     }
     #contact-form {
@@ -385,14 +397,17 @@ ul.footer-links {
     }
 }
 
-/* Responsive Styling @550px and below */
-@media only screen and (max-width: 550px){
+/* Responsive Styling @600px and below */
+@media only screen and (max-width: 600px){
+
     h1 {
-        font-size: .75rem;
+        font-size: 1.5rem;
+
     }
 
     .image-text p {
-        font-size: .75rem;
+        font-size: 1.5rem;
+
     }
     .footer-info {
         padding-right: 1.5rem;
@@ -412,10 +427,10 @@ ul.footer-links {
 /* Responsive Styling @400px and below */
 @media only screen and (max-width: 400px){
     h1 {
-        font-size: .65rem;
+        font-size: 1.4rem;
     }
     .image-text p {
-        font-size: .65rem;
+        font-size: 1.4rem;
     }
     .footer-info {
         padding-right: 1rem;
@@ -432,8 +447,13 @@ ul.footer-links {
     .cta-subscribe {
         width: 220px;
     }
+    .copyright p {
+        font-size: .75rem;
+        padding: 5px;
+    }
 
 }
+
 
 
 
