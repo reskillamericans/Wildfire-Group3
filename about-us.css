@@ -134,6 +134,7 @@ header {
     align-items: center;
     padding-top: 4rem;
 }
+
 header h1 {
     margin: 0 1rem;
 }
@@ -141,9 +142,7 @@ header h2 {
     line-height: 42px;
     margin: 0 1rem;
 }
-button.getstarted  {
-    margin: 1rem;
-}
+
 
 /* Carousel */
 #i1, #i2, #i3, #i4, #i5{ display: none;}
@@ -272,7 +271,10 @@ button.getstarted  {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 7rem 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
 }
 .cta-container div:first-child {
     order: 2;
@@ -411,6 +413,7 @@ ul.footer-links {
     flex-direction: row;
     justify-content: center;
     margin-top: 10rem;
+    margin-bottom: 5rem;
     }
     .cta-container div:first-child{
         order: -1;
