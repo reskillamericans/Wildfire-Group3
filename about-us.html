@@ -11,20 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/ico" href="/images/fire-reporter-logo.ico">
     <script src="https://kit.fontawesome.com/21d1f09dfc.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <!-- Nav -->
-    <nav>
-        <a href="index.html" class="logo"><img src="images/fire-reporter-logo.svg" alt="Fire Reporter Logo">Fire
-            Reporter</a>
-        <ul class="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about-us.html" class="active-link">ABOUT</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="brand-title"><img src="images/fire-reporter-logo.png" alt="fire reporter logo"></div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about-us.html" class="active-link">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
     </nav>
+
     <!-- Header -->
     <header>
         <div class="about">
@@ -34,45 +41,127 @@
                 people can receive timely, accurate, and reliable information about wild fire outbreaks. Now you can
                 easily,
                 report and receive news about fire outbreaks from your phone.</h2>
-            <button class="cta">Get Started</button>
+            <button class="getstarted">Get Started</button>
         </div>
     </header>
-    <!-- Meet Our Team -->
-    <section class="team">
-        <h2>Meet Our Team</h2>
-        <div class="team-container">
-            <div class="team-card">
-                <img src="/images/Diana-Park.svg" class="team-pic" alt="Picture of Alana Trim">
-                <h3 class="name">Alana Trim</h3>
-                <h3 class="job-title">Product Manager</h3>
-                <p>Trim ensures that the processes and all facets of the product are user friendly, easily accessible
-                    and
-                    relevant to user needs.</p>
+    <!-- Carousel -->
+    <div class="container">
+        <h2>Meet our Team</h2>
+        <input type="radio" id="i1" name="images" checked />
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+        <input type="radio" id="i4" name="images" />
+
+        <div class="slide_img" id="one">
+            <div class="team-slide">
+                <div class="profile-card">
+                    <img src="images/team-images/jadon.png">
+                    <h3>Jado’n Miguel Rickenbacker</h3>
+                    <h4>UI/UX</h4>
+                    <p>Jado'n was responsible for the design and layout of Fire Reporter's mobile app.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="images/team-images/collins.png">
+                    <h3>Collins Park</h3>
+                    <h4>UI/UX</h4>
+                    <p>Collins was responsible for the design and layout of Fire Reporter's website.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="images/team-images/default.png">
+                    <h3>Isidro Hernandez</h3>
+                    <h4>Front End</h4>
+                    <p>Isidro developed the FAQ page. </p>
+                </div>
             </div>
-            <div class="team-card">
-                <img src="/images/Ric-Farlon.svg" class="team-pic" alt="Picture of Ric Farlon">
-                <h3 class="name">Ric Farlon</h3>
-                <h3 class="job-title">Lead Developer</h3>
-                <p>Farlon leads a team of both frontend and backend developers ensuring that the product is fast and
-                    stable.
-                </p>
-            </div>
-            <div class="team-card">
-                <img src="/images/Robert-Hall.svg" class="team-pic" alt="Picture of Philip Hall">
-                <h3 class="name">Philip Hall</h3>
-                <h3 class="job-title">Lead Designer</h3>
-                <p>Leads the UX/UI team in making easy to use interfaces for users and ensuring that all the features
-                    are
-                    easily accessible.</p>
-            </div>
+            <label class="prev" for="i4"></label>
+            <label class="next" for="i2"></label>
         </div>
-    </section>
+
+        <div class="slide_img" id="two">
+            <div class="team-slide">
+                <div class="profile-card">
+                    <img src="images/team-images/amy.JPG">
+                    <h3>Amy Funderberg</h3>
+                    <h4>Front End</h4>
+                    <p>Amy developed the website's Contact page.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="images/team-images/sammy.JPG">
+                    <h3>Sammy Elfatrany</h3>
+                    <h4>Front End</h4>
+                    <p>Sammy developed the website's Landing page.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="images/team-images/dinah.jpg">
+                    <h3>Dinah Brito</h3>
+                    <h4>Front End</h4>
+                    <p>Dinah developed the website's About Us page.</p>
+                </div>
+            </div>
+            <label class="prev" for="i1"></label>
+            <label class="next" for="i3"></label>
+        </div>
+
+        <div class="slide_img" id="three">
+            <div class="team-slide">
+                <div class="profile-card">
+                    <img src="images/team-images/default.png">
+                    <h3>Gabriel Fuentes</h3>
+                    <h4>Back End</h4>
+                    <p>Gabriel developed the back end functionality for the website.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="images/team-images/rolando.JPG">
+                    <h3>Rolando Aniel</h3>
+                    <h4>Mobile</h4>
+                    <p>Rolando helped develop the mobile app and seed data into Firebase.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="images/team-images/anya.jpg">
+                    <h3>Mbah Anya Sunday</h3>
+                    <h4>Mobile</h4>
+                    <p>Mbah developed the Register/Sign up page for the mobile app.</p>
+                </div>
+            </div>
+            <label class="prev" for="i2"></label>
+            <label class="next" for="i4"></label>
+        </div>
+
+        <div class="slide_img" id="four">
+            <div class="team-slide short">
+                <div class="profile-card">
+                    <img src="images/team-images/leilani.JPG">
+                    <h3>Leilani Allen</h3>
+                    <h4>Mobile</h4>
+                    <p>Leilani developed the Homepage for the mobile app.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="images/team-images/amani.jpg">
+                    <h3>Amani Pitts</h3>
+                    <h4>Mobile</h4>
+                    <p>Amani developed the Splash and Onboarding screen for the mobile app.</p>
+                </div>
+            </div>
+            <label class="prev" for="i3"></label>
+            <label class="next" for="i1"></label>
+        </div>
+
+        <div id="nav_slide">
+            <label for="i1" class="dots" id="dot1"></label>
+            <label for="i2" class="dots" id="dot2"></label>
+            <label for="i3" class="dots" id="dot3"></label>
+            <label for="i4" class="dots" id="dot4"></label>
+        </div>
+
+    </div>
+
     <!-- Call To Action Section -->
     <div class="cta-container">
         <div class="cta-text">
             <h2>Find the most accurate news about fire outbreaks or simply share that information with us.</h2>
         </div>
-        <div class="cta-img"><img src="images/fire-vector.svg" alt="Fire Icon">
+        <div class="cta-img">
+            <img src="images/fire-vector.svg" alt="Fire Icon">
         </div>
     </div>
     <!-- Footer -->
@@ -114,7 +203,6 @@
             <p>Copyright 2021 FireReporter. All Rights Reserved.</p>
         </div>
     </footer>
-
 </body>
 
 </html>
