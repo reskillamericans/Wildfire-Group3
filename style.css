@@ -293,11 +293,6 @@ ul.footer-links {
 }
 /* Responsive Styling @400px and up */
 @media only screen and (min-width: 400px) {
-  .containergrid {
-    display: block;
-    width: 100%;
-  }
-
   h1 {
     font-size: 7vw;
   }
@@ -306,10 +301,6 @@ ul.footer-links {
     line-height: 30px;
     font-weight: 700;
     margin-bottom: 6px;
-  }
-
-  .centerimg {
-    width: 100%;
   }
 
   p {
@@ -575,6 +566,18 @@ button {
   }
   #newsletter p {
     font-size: 16px;
+  }
+
+  .containergrid {
+    display: block;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .gridpiece {
+    width: 75%;
+    margin-bottom: 50px;
   }
 }
 
