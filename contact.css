@@ -101,11 +101,19 @@ p {
 }
 
 /******** Hero Image ********/
-
-.main-image img {
+.main-image {
+    box-sizing: border-box;
+    display: block;
     width: 100%;
-    min-height: 588px;
+    height: 60vh;
+    padding: 0;
+    margin: 0;
+    background-image: url('images/contact-images/customersupport.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
+
 .main-image {
     overflow: hidden;
     position: relative;
@@ -228,7 +236,6 @@ footer {
     border-radius: 4px;
     color: var(--secondary_text);
     padding: .5rem 0;
-    /*text-align: center;*/
     text-indent: 1rem;
 }
 ::placeholder{
@@ -308,12 +315,7 @@ ul.footer-links {
         width: 344px;
     }
 }
-@media all and (max-width: 1600px) {
-    .main-image img {
-        width: auto;
-        /*min-height: 588px;*/
-    }
-}
+
 
 /* Responsive Styling 930px and up */
 @media only screen and (min-width: 930px){
@@ -333,13 +335,13 @@ ul.footer-links {
     }
     .main-image image {
         width: 100% !important;
-
     }
 
 }
 
 /* Responsive Styling 768px and below */
 @media only screen and (max-width: 768px){
+
     h1 {
         font-size: 1.75rem;
     }
@@ -402,13 +404,12 @@ ul.footer-links {
 
     h1 {
         font-size: 1.5rem;
-
     }
 
     .image-text p {
         font-size: 1.5rem;
-
     }
+
     .footer-info {
         padding-right: 1.5rem;
         padding-bottom: 1.5rem;
@@ -427,10 +428,10 @@ ul.footer-links {
 /* Responsive Styling @400px and below */
 @media only screen and (max-width: 400px){
     h1 {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
     }
     .image-text p {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
     }
     .footer-info {
         padding-right: 1rem;
