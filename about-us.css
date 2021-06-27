@@ -141,19 +141,8 @@ header h2 {
     line-height: 42px;
     margin: 0 1rem;
 }
-button.cta {
-    border: none;
-    background-color: var(--primary);
-    color: var(--background);
-    padding: .5rem 5rem;
-    border-radius: 4px;
-    max-width: 300px;
-}
-button.cta:hover {
-    background-color: var(--background);
-    border: 1px solid var(--primary);
-    color: var(--primary);
-
+button.getstarted  {
+    margin: 1rem;
 }
 
 /* Carousel */
@@ -291,20 +280,45 @@ button.cta:hover {
 .cta.img {
     width: 84px;
 }
+/* Styling for Input Forms */
+label {
+    font-size: 13px;
+    font-weight: 700;
+    padding-top: 15px;
+}
+
+input, textarea {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #ECECEC;
+    border: none;
+    border-radius: 4px;
+}
+
+textarea {
+    margin-bottom: 30px;
+}
+sup {
+    color: #FF0000;
+}
+
+button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 70px;
+    width: 343px;
+}
+
 /* Footer */
+
 footer {
     justify-content: center;
 }
 .bold {
     font-weight: 700;
     font-size: 21px;
-}
-input:focus,
-input:hover {
- border: 1px solid var(--primary) !important;
- box-shadow: 0 0 5px var(--primary);
- outline-offset: 0;
- outline: none;
 }
 .footer-info {
     display: flex;
@@ -329,9 +343,13 @@ input:hover {
     border: none;
     border-radius: 4px;
     color: var(--secondary_text);
-    padding: .5rem 0rem;
-    text-align: center;
+    padding: .5rem 0;
+    text-indent: 1rem;
 }
+::placeholder{
+    text-indent: 1rem;
+}
+
 ul.footer-links {
     list-style-type: none;
     padding: 0;
@@ -357,6 +375,7 @@ ul.footer-links {
 }
 .social i {
     margin-right: 2rem;
+    width: 21px;
 }
 .copyright {
     display: flex;
@@ -372,23 +391,8 @@ ul.footer-links {
 
 .copyright p {
     align-self: center;
-    margin: 2rem;
 }
-/* Responsive Styling @400px and below */
-@media only screen and (max-width: 400px){
-    .footer-info {
-        padding-right: 1rem;
-        padding-bottom: 1rem;
-        justify-content: left;
-    }
-    #contact-form {
-        margin: 15px;
-    }
-    #subscribe-email,
-    .cta-subscribe {
-        width: 220px;
-    }
-}
+
 /* Responsive Styling @400px and up */
 @media only screen and (min-width: 400px) {
     h1 {
@@ -417,7 +421,7 @@ ul.footer-links {
     .cta-img {
         margin-left: 3rem;
     }
-     /* Footer */
+      /* Footer */
    .footer-info {
     display: flex;
     flex-direction: row;
@@ -425,41 +429,30 @@ ul.footer-links {
     justify-content: space-around;
     padding-top: 2rem;
     padding-bottom: 2rem;
-}
-.subscribe {
-    align-self: start;
-}
- .social {
-     margin-top: 0;
- }
-#newsletter input {
-     padding: 0;
-     height: 40px;
-     width: 343px;
-     text-align: justify;
- }
- ::placeholder{
-     text-indent: 1rem;
- }
- button.cta-subscribe {
-     height: 40px;
-     width: 344px;
- }
-}
-/* Responsive Styling @550px and below */
-@media only screen and (max-width: 550px){
-    .footer-info {
-        padding-right: 1.5rem;
-        padding-bottom: 1.5rem;
-        justify-content: left;
     }
-    #contact-form {
-        margin: 15px;
+    .subscribe {
+        align-self: start;
+    }
+    .social {
+        margin-top: 0;
+    }
+    #newsletter input {
+        padding: 0;
+        height: 40px;
+        width: 343px;
+        text-align: justify;
     }
 
-    #subscribe-email,
-    .cta-subscribe {
-        width: 250px;
+    button.cta-subscribe {
+        height: 40px;
+        width: 344px;
+    }
+}
+/* Responsive Styling 768px and below */
+@media only screen and (max-width: 768px){ 
+    /* Footer */
+    #newsletter p {
+        font-size: 16px;
     }
 }
 
@@ -497,8 +490,8 @@ ul.footer-links {
         padding: 3rem;
     }
     }
-/* Responsive styling for screens 600px and under */
 
+/* Responsive styling for screens 600px and under */
 @media (max-width: 600px) {
     /* Nav styling */
     .toggle-button {
@@ -531,40 +524,38 @@ ul.footer-links {
     .navbar-links.active {
         display: flex;
     }
+    /* Footer */
+
+    .footer-info {
+        padding-right: 1.5rem;
+        padding-bottom: 1.5rem;
+        justify-content: left;
+    }
+
+    #subscribe-email,
+    .cta-subscribe {
+        width: 250px;
+    }
 }
+/* Responsive Styling @400px and below */
+@media only screen and (max-width: 400px){
 
-    /* Styling for Input Forms */
-    label {
-        font-size: 13px;
-        font-weight: 700;
-        padding-top: 15px;
+    /* Footer */
+    .footer-info {
+         padding-right: 1rem;
+         padding-bottom: 1rem;
+         justify-content: left;
     }
-    
-    input, textarea {
-        margin: 5px 0;
-        padding: 10px;
-        background-color: #ECECEC;
-        border: none;
-        border-radius: 4px;
+    #subscribe-email,
+    .cta-subscribe {
+        width: 220px;
     }
-    
-    textarea {
-        margin-bottom: 30px;
-    }
-    sup {
-        color: #FF0000;
-    }
-    
-    button {
-        background: #FF8B00;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 70px;
-        margin: 15px 0;
-        width: 343px;
+    .copyright p {
+        font-size: .75rem;
+        padding: 5px;
     }
 
+}
 /* responsive styling for carousel */
 @media screen and (max-width: 375px){
 	.container{
@@ -595,7 +586,7 @@ ul.footer-links {
         width: 70%;
     }
 }
-/* */
+/* Repsonsive styling for Carousel */
 @media screen and (max-width: 1100px){
 	.container{
 		border: none;
