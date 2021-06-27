@@ -112,14 +112,12 @@ p {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-}
-
-.main-image {
     overflow: hidden;
     position: relative;
     text-align: center;
     color: white;
 }
+
 .image-text {
     position: absolute;
     top: 50%;
@@ -325,23 +323,18 @@ ul.footer-links {
         flex-wrap: nowrap;
         padding: 0 4rem;
     }
-    .logo {
-        justify-content: start;
-    }
+
     ul.nav-links {
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
-    }
-    .main-image image {
-        width: 100% !important;
     }
 
 }
 
 /* Responsive Styling 768px and below */
 @media only screen and (max-width: 768px){
-
+    /* Hero Section */
     h1 {
         font-size: 1.75rem;
     }
@@ -350,18 +343,21 @@ ul.footer-links {
         font-size: 1.75rem;
 
     }
+    /* Contact Form */
     #contact-form {
         margin: 15px;
     }
     #contact-form button {
         width: 300px;
     }
+    /* Footer */
     #newsletter p {
         font-size: 16px;
     }
 }
 
 @media (max-width: 600px) {
+    /* Header */
     .toggle-button {
         display: flex;
         width: 25px;
@@ -401,7 +397,7 @@ ul.footer-links {
 
 /* Responsive Styling @600px and below */
 @media only screen and (max-width: 600px){
-
+    /* Hero Section */
     h1 {
         font-size: 1.5rem;
     }
@@ -409,14 +405,16 @@ ul.footer-links {
     .image-text p {
         font-size: 1.5rem;
     }
+    /* Contact Form */
+    #contact-form {
+        margin: 15px;
+    }
+    /* Footer */
 
     .footer-info {
         padding-right: 1.5rem;
         padding-bottom: 1.5rem;
         justify-content: left;
-    }
-    #contact-form {
-        margin: 15px;
     }
 
     #subscribe-email,
@@ -427,22 +425,25 @@ ul.footer-links {
 }
 /* Responsive Styling @400px and below */
 @media only screen and (max-width: 400px){
+    /* Contact Form */
+    #contact-form {
+        margin: 10px;
+    }
+    #contact-form button {
+        width: 220px;
+    }
+    /* Hero Section */
     h1 {
         font-size: 1.25rem;
     }
     .image-text p {
         font-size: 1.25rem;
     }
+    /* Footer */
     .footer-info {
-        padding-right: 1rem;
-        padding-bottom: 1rem;
-        justify-content: left;
-    }
-    #contact-form {
-        margin: 10px;
-    }
-    #contact-form button {
-        width: 220px;
+         padding-right: 1rem;
+         padding-bottom: 1rem;
+         justify-content: left;
     }
     #subscribe-email,
     .cta-subscribe {
