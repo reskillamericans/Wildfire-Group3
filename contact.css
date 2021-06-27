@@ -123,6 +123,7 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 70vw;
 }
 
 h1 {
@@ -398,6 +399,7 @@ ul.footer-links {
 /* Responsive Styling @600px and below */
 @media only screen and (max-width: 600px){
     /* Hero Section */
+
     h1 {
         font-size: 1.5rem;
     }
