@@ -38,7 +38,6 @@ p {
   }
 
   /* NAV BAR */
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -49,7 +48,7 @@ p {
 
 .brand-title {
     font-size: 1.5rem ;
-    margin: 1rem;
+    margin: 8px;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-weight: bolder;
 }
@@ -96,7 +95,7 @@ p {
 
 .toggle-button {
     position: absolute;
-    top: .75rem;
+    top: .25rem;
     right: 1rem;
     display: none;
     flex-direction: column;
