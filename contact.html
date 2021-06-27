@@ -35,10 +35,17 @@
         </nav>
     </header>
     <section class="main">
-        <section class="main-image">
-            <img src="images/contact-images/customer.svg" alt="Customer service">
-        </section>
-        <form id="contact-form" action="#">
+        <div class="main-image">
+            <div class="image-text">
+                    <h1>Get In Touch With Us</h1>
+                    <p>We would love to hear from you.
+                        At FireReporter, we provide exceptional service we would love to experience ourselves.
+                        You have a fire outbreak news? Talk to a human!
+                    </p>
+            </div>
+        </div>
+
+        <form id="contact-form"  method="post">
             <p>Enter Your Details</p>
             <label for="contact-first-name">First Name<sup>*</sup></label>
             <input id="contact-first-name" type="text" name="firstname" required><br>
@@ -57,7 +64,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-info">
-            <form id="newsletter">
+            <form id="newsletter"  method="post">
                 <p class="bold">Want to join our Membership team?</p>
                 <p>Subscribe to our newsletter</p>
                 <input type="email" id="subscribe-email" name="email" placeholder="Enter Your Email">
