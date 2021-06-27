@@ -37,51 +37,64 @@ p {
     box-sizing: border-box;
   }
 
-  /* Hamburger NAV BAR */
-  .navbar {
+  /* NAV BAR */
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    color: var(--primary_text);
-  }
-  .brand-title {
+    color: #180126;
+}
+
+.brand-title {
     font-size: 1.5rem ;
     margin: 1rem;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-weight: bolder;
-  }
-  .brand-title img {
-    width: 200px;
 }
-  .navbar-links ul {
+
+.brand-title img {
+    width: 150px;
+}
+
+.navbar-links ul {
     margin: 0;
     padding: 0;
     font-weight: bolder;
     text-transform: uppercase;
     display: flex;
-  }
-  .navbar-links li {
+}
+
+
+.navbar-links li {
     list-style: none;
     font-weight: bolder;
     text-transform: uppercase;
-    margin: 5px;
-  }
-  .navbar-links li a:hover {
-    color: var(--primary);
-  }
-  .navbar-links li a.active-link {
-    color: var(--primary);
 }
-  .navbar-links li a {
+
+.navbar-links li a:hover {
+    color: #FF8B00;
+}
+
+.navbar-links li a:active {
+    color: #FF8B00;
+}
+
+.active-link {
+    color: var(--primary) !important;
+}
+
+.navbar-links li a {
     text-decoration: none;
-    color: var(--primary_text);
+    color: #180126;
     font-size: 16px;
     padding: 1rem;
     display: block;
     text-transform: capitalize;
-  }
-  .toggle-button {
+}
+
+.toggle-button {
     position: absolute;
     top: .75rem;
     right: 1rem;
@@ -90,14 +103,16 @@ p {
     justify-content: space-between;
     width: 30px;
     height: 21px;
-  }
-  .toggle-button .bar {
+}
+
+.toggle-button .bar {
     height: 3px;
     width: 100%;
-    border-color: var(--primary_text);
-    background-color: var(--primary_text);
+    border-color: black;
+    background-color: black;
     border-radius: 10px;
-  }
+    color: white;
+}
 
 /* Header */ 
 header {
@@ -447,62 +462,20 @@ ul.footer-links {
         width: 250px;
     }
 }
-/* Navbar responsive styling */
-@media (max-width: 600px) {
-    .toggle-button {
-        display: flex;
-        width: 25px;
-        margin: 25px;
-    }
-    .brand-title img {
-        width: 150px;
-        margin: 10px 20px;
-    }
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
 
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-links ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-links li {
-        text-align: center;
-    }
-
-    .navbar-links li a {
-        padding: .5rem 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-}
 /* Responsive Styling 930px and up */
 @media only screen and (min-width: 930px){
       /* Nav */
       nav {
         display: flex;
         flex-wrap: nowrap;
-        padding: 0rem 4rem;
+        padding: 0 4rem;
     }
-    .logo {
-        justify-content: start;
-    }
+
     ul.nav-links {
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
-    }
-    .nav-links li {
-        margin-left: 2rem;
     }
     /* Header */
     .about {
@@ -524,7 +497,43 @@ ul.footer-links {
         padding: 3rem;
     }
     }
+/* Responsive styling for screens 600px and under */
 
+@media (max-width: 600px) {
+    /* Nav styling */
+    .toggle-button {
+        display: flex;
+        width: 25px;
+        margin: 15px 20px;
+    }
+    .brand-title img {
+        width: 150px;
+        margin: 0 15px;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+    /* Styling for Input Forms */
     label {
         font-size: 13px;
         font-weight: 700;
