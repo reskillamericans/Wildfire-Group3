@@ -1,32 +1,36 @@
+from django.contrib import messages
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.core.validators import validate_email
-from django.core.exceptions import ValidationError
-from .models import NewsletterEmailSub
+from django.core.mail import mail_admins, send_mail
 from .forms import CreateNewEmailSubscription
+from .models import NewsletterEmailSub
 
 # Create your views here.
 
 def index(request):
-<<<<<<< HEAD
-    return HttpResponse("<h1>Wildfire App 3</h1>")
-
-def newsletter(request):
-    
-
     if request.method == 'POST':
         form = CreateNewEmailSubscription(request.POST)
-
         if form.is_valid():
             new_email = form.cleaned_data["email"]
-            new_sub = CreateNewEmailSubscription(email=new_email)
-            new_sub.save()
             
-       
- 
-        
-    return render(request, "fireapp/newsletter.html", {"form": form})
-    
-=======
+
+            # Check if email is already in database
+            email_sub =  NewsletterEmailSub.objects.get_or_create(email=new_email)
+            if email_sub[1]:
+                messages.info(request, "Thank you for subscribing.")
+                email_sub[0].save()
+
+                message = "Here is your newsletter subcription confirmation."
+                send_mail("Newsletter Subscription", message, None, recipient_list = [new_email])
+
+                message = f'{new_email} has been added to the newsletter mailing list'
+                mail_admins("New Newsletter Subscriber", message)
+            else:
+                messages.info(request, "You are already subscribed")
+
     return render(request, "index.html")
->>>>>>> 4593361d555e31f124afc735fce128368d789a9e
+
+
+
+
+    
+    

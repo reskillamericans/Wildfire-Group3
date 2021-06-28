@@ -14,6 +14,14 @@
 <body>
     <nav class="navbar">
         <div class="brand-title"><img src="{% static 'images/fire-reporter-logo.png' %}" width="200px"></div>
+        {% if messages %}
+        <ul class="messages"  autocomplete="off">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
         <a href="#" class="toggle-button"> 
             <span class="bar"></span>
             <span class="bar"></span>
@@ -65,9 +73,11 @@
         </div>
         <footer>
             <div class="footer-info">
-                <form id="newsletter">
+                <form id="newsletter" method="post">
                     <p class="bold">Want to join our Membership team?</p>
                     <p>Subscribe to our newsletter</p>
+                    {% csrf_token %}
+                    {{form}}
                     <input type="email" id="subscribe-email" name="email" placeholder="Enter Your Email">
                     <button class="cta cta-subscribe">Subscribe</button>
                 </form>
