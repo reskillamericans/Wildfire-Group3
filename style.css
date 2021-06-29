@@ -318,6 +318,10 @@ ul.footer-links {
         #newsletter p {
             font-size: 16px;
         }
+
+        button {
+          width: 200px !important;
+        }
     }
 
 /* Responsive Styling @400px and up */
@@ -326,7 +330,7 @@ ul.footer-links {
     font-size: 10vw;
   }
   h2 {
-    font-size: 4vw;
+    font-size: 7vw;
     line-height: 40px;
     font-weight: 700;
     margin-bottom: 6px;
@@ -583,7 +587,7 @@ button {
   }
 
   .containergrid {
-    display: block;
+    display: grid;
     width: 100%;
     padding: 0;
     text-align: center;
