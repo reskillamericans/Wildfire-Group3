@@ -35,3 +35,7 @@ class FireIncident(models.Model):
     reporter_last_name = models.CharField(max_length=50)
     reporter_contact_info = models.CharField(max_length=15)
     # incident_image = models.ImageField()
+    
+class NewsletterEmailSub(models.Model):
+    email = models.EmailField(unique=True)
+    sign_up_date = models.DateTimeField(auto_now=True)
