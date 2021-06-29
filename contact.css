@@ -35,13 +35,13 @@ p {
 
 .brand-title {
   font-size: 1.5rem;
-  margin: 1rem;
+  margin: 8px;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: bolder;
 }
 
 .brand-title img {
-  width: 200px;
+  width: 150px;
 }
 
 .navbar-links ul {
@@ -56,7 +56,6 @@ p {
   list-style: none;
   font-weight: bolder;
   text-transform: uppercase;
-  margin: 5px;
 }
 
 .navbar-links li a:hover {
@@ -82,7 +81,7 @@ p {
 
 .toggle-button {
   position: absolute;
-  top: 0.75rem;
+  top: 0.25rem;
   right: 1rem;
   display: none;
   flex-direction: column;
@@ -101,9 +100,40 @@ p {
 }
 
 /******** Hero Image ********/
-
-img {
+.main-image {
+  box-sizing: border-box;
+  display: block;
   width: 100%;
+  height: 60vh;
+  padding: 0;
+  margin: 0;
+  background-image: url("images/contact-images/customersupport.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+}
+
+h1 {
+  font-size: 37px;
+  font-weight: 700;
+}
+
+.image-text p {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 /******** Contact Form ********/
@@ -159,7 +189,6 @@ button {
   border: none;
   border-radius: 5px;
   padding: 10px 70px;
-  margin: 15px 0;
   width: 343px;
 }
 
@@ -206,8 +235,12 @@ footer {
   border-radius: 4px;
   color: var(--secondary_text);
   padding: 0.5rem 0;
-  text-align: center;
+  text-indent: 1rem;
 }
+::placeholder {
+  text-indent: 1rem;
+}
+
 ul.footer-links {
   list-style-type: none;
   padding: 0;
@@ -274,9 +307,7 @@ ul.footer-links {
     width: 343px;
     text-align: justify;
   }
-  ::placeholder {
-    text-indent: 1rem;
-  }
+
   button.cta-subscribe {
     height: 40px;
     width: 344px;
@@ -291,41 +322,47 @@ ul.footer-links {
     flex-wrap: nowrap;
     padding: 0 4rem;
   }
-  .logo {
-    justify-content: start;
-  }
+
   ul.nav-links {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
   }
-  .nav-links li {
-    margin-left: 2rem;
-  }
 }
 
 /* Responsive Styling 768px and below */
 @media only screen and (max-width: 768px) {
+  /* Hero Section */
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .image-text p {
+    font-size: 1.75rem;
+  }
+  /* Contact Form */
   #contact-form {
-    margin: 30px;
+    margin: 15px;
   }
   #contact-form button {
     width: 300px;
   }
+  /* Footer */
   #newsletter p {
     font-size: 16px;
   }
 }
 
 @media (max-width: 600px) {
+  /* Header */
   .toggle-button {
     display: flex;
     width: 25px;
-    margin: 25px;
+    margin: 15px 20px;
   }
   .brand-title img {
     width: 150px;
-    margin: 10px 20px;
+    margin: 0 15px;
   }
   .navbar-links {
     display: none;
@@ -355,15 +392,27 @@ ul.footer-links {
   }
 }
 
-/* Responsive Styling @550px and below */
-@media only screen and (max-width: 550px) {
+/* Responsive Styling @600px and below */
+@media only screen and (max-width: 600px) {
+  /* Hero Section */
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .image-text p {
+    font-size: 1.5rem;
+  }
+  /* Contact Form */
+  #contact-form {
+    margin: 15px;
+  }
+  /* Footer */
+
   .footer-info {
     padding-right: 1.5rem;
     padding-bottom: 1.5rem;
     justify-content: left;
-  }
-  #contact-form {
-    margin: 15px;
   }
 
   #subscribe-email,
@@ -373,19 +422,32 @@ ul.footer-links {
 }
 /* Responsive Styling @400px and below */
 @media only screen and (max-width: 400px) {
-  .footer-info {
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    justify-content: left;
-  }
+  /* Contact Form */
   #contact-form {
     margin: 10px;
   }
   #contact-form button {
     width: 220px;
   }
+  /* Hero Section */
+  h1 {
+    font-size: 1.25rem;
+  }
+  .image-text p {
+    font-size: 1.25rem;
+  }
+  /* Footer */
+  .footer-info {
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    justify-content: left;
+  }
   #subscribe-email,
   .cta-subscribe {
     width: 220px;
+  }
+  .copyright p {
+    font-size: 0.75rem;
+    padding: 5px;
   }
 }
