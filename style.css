@@ -201,7 +201,10 @@ button:hover {
 .cta.img {
   width: 84px;
 }
+
+
 /* Footer */
+
 footer {
   justify-content: center;
 }
@@ -213,12 +216,12 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #c4c4c4;
+  background-color: #C4C4C4;
   padding-left: 3rem;
   padding-right: 2.5rem;
   padding-bottom: 2.5rem;
 }
-.footer-info h3 {
+.footer-info h3{
   font-weight: 700;
   font-size: 16px;
 }
@@ -232,15 +235,19 @@ footer {
   border: none;
   border-radius: 4px;
   color: var(--secondary_text);
-  padding: 0.5rem 0rem;
-  text-align: center;
+  padding: .5rem 0;
+  text-indent: 1rem;
 }
+::placeholder{
+  text-indent: 1rem;
+}
+
 ul.footer-links {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-.footer-links li {
+.footer-links li{
   padding: 10px 0;
 }
 .footer-links li:first-child {
@@ -260,14 +267,15 @@ ul.footer-links {
 }
 .social i {
   margin-right: 2rem;
+  width: 21px;
 }
 .copyright {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #63625b;
-  margin: 0;
-  padding: 0;
+  background-color: #63625B;
+  margin:0;
+  padding:0;
   color: var(--background);
   font-size: 1rem;
   font-weight: 700;
@@ -276,29 +284,46 @@ ul.footer-links {
 .copyright p {
   align-self: center;
 }
-/* Responsive Styling @400px and below */
-@media only screen and (max-width: 400px) {
-  .footer-info {
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    justify-content: left;
-  }
-  #contact-form {
-    margin: 15px;
-  }
-  #subscribe-email,
-  .cta-subscribe {
-    width: 220px;
-  }
+
+input:focus,
+textarea:focus,
+input:hover,
+textarea:hover {
+    border: 1px solid var(--primary) !important;
+    box-shadow: 0 0 5px var(--primary);
+    outline-offset: 0;
+    outline: none;
 }
+
+#newsletter input {
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+  color: var(--secondary_text);
+  padding: .5rem 0;
+  text-align: center;
+}
+
+    /* Responsive Styling 768px and below */
+    @media only screen and (max-width: 768px){ 
+        /* Footer */
+        #newsletter p {
+            font-size: 16px;
+        }
+
+        button {
+          width: 100% !important;
+        }
+    }
+
 /* Responsive Styling @400px and up */
 @media only screen and (min-width: 400px) {
   h1 {
-    font-size: 7vw;
+    font-size: 10vw;
   }
   h2 {
-    font-size: 4vw;
-    line-height: 30px;
+    font-size: 7vw;
+    line-height: 40px;
     font-weight: 700;
     margin-bottom: 6px;
   }
@@ -310,6 +335,7 @@ ul.footer-links {
   header {
     height: 73vh;
   }
+}
 
   /* Call to Action Section */
   .cta-container {
@@ -345,7 +371,7 @@ ul.footer-links {
   #newsletter input {
     padding: 0;
     height: 40px;
-    width: 343px;
+    width: 100%;
     text-align: justify;
   }
   ::placeholder {
@@ -353,7 +379,8 @@ ul.footer-links {
   }
   button.cta-subscribe {
     height: 40px;
-    width: 344px;
+    width: 100%;
+    font-size: 18px;
   }
 }
 /* Responsive Styling @550px and below */
@@ -426,8 +453,10 @@ button {
   padding: 10px 70px;
   margin: 15px 0;
   width: 343px;
+  font-size: 18px;
 }
 
+/* NAV BAR */
 /* NAV BAR */
 
 .navbar {
@@ -436,17 +465,18 @@ button {
   align-items: center;
   background-color: white;
   color: #180126;
+  padding: 0 64px 0 64px;
 }
 
 .brand-title {
   font-size: 1.5rem;
-  margin: 1rem;
+  margin: 8px;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: bolder;
 }
 
 .brand-title img {
-  width: 200px;
+  width: 150px;
 }
 
 .navbar-links ul {
@@ -461,7 +491,6 @@ button {
   list-style: none;
   font-weight: bolder;
   text-transform: uppercase;
-  margin: 5px;
 }
 
 .navbar-links li a:hover {
@@ -470,6 +499,10 @@ button {
 
 .navbar-links li a:active {
   color: #ff8b00;
+}
+
+.active-link {
+  color: var(--primary) !important;
 }
 
 .navbar-links li a {
@@ -483,7 +516,7 @@ button {
 
 .toggle-button {
   position: absolute;
-  top: 0.75rem;
+  top: 0.25rem;
   right: 1rem;
   display: none;
   flex-direction: column;
@@ -503,56 +536,38 @@ button {
 
 /* END NAV BAR */
 
-/* Responsive Styling @400px and up */
-@media only screen and (min-width: 400px) {
-  /* Footer */
-  .footer-info {
+/* Responsive styling for screens 600px and under */
+@media (max-width: 600px) {
+  /* Nav styling */
+  .toggle-button {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    width: 25px;
+    margin: 15px 20px;
   }
-  .subscribe {
-    align-self: start;
+  .brand-title img {
+    width: 150px;
+    margin: 0 15px;
   }
-  .social {
-    margin-top: 0;
+  .navbar-links {
+    display: none;
+    width: 100%;
   }
-  #newsletter input {
-    padding: 0;
-    height: 40px;
-    width: 343px;
-    text-align: justify;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  ::placeholder {
-    text-indent: 1rem;
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
   }
-  button.cta-subscribe {
-    height: 40px;
-    width: 344px;
+  .navbar-links li {
+    text-align: center;
   }
-}
-
-/* Responsive Styling 930px and up */
-@media only screen and (min-width: 930px) {
-  /* Nav */
-  nav {
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links.active {
     display: flex;
-    flex-wrap: nowrap;
-    padding: 0 4rem;
-  }
-  .logo {
-    justify-content: start;
-  }
-  ul.nav-links {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-  }
-  .nav-links li {
-    margin-left: 2rem;
   }
 }
 
@@ -569,7 +584,7 @@ button {
   }
 
   .containergrid {
-    display: block;
+    display: grid;
     width: 100%;
     padding: 0;
     text-align: center;
@@ -599,6 +614,58 @@ button {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+/* Responsive Styling 768px and below */
+@media only screen and (max-width: 768px) {
+  #contact-form {
+    margin: 30px;
+  }
+  #contact-form button {
+    width: 300px;
+  }
+  #newsletter p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+    width: 25px;
+    margin: 25px;
+  }
+  .brand-title img {
+    width: 150px;
+    margin: 10px 20px;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
   }
 
   .navbar-links ul {
