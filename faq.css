@@ -257,7 +257,7 @@ h1 {
   .accordion .content p {
     font-size: 1rem;
     font-weight: 300;
-    width: 80%;
+    text-align: justify;
     padding-left: 1.8rem;
   }
   .accordion .content.active {
@@ -492,6 +492,10 @@ input:hover {
     height: 35rem;
 }
 
+footer {
+    margin-top: 7rem;
+}
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -504,6 +508,8 @@ input:hover {
     display: inline-block;
     padding-left: 4rem;
 }
+
+
 
 .toggle-button {
     display: flex;
@@ -536,10 +542,6 @@ input:hover {
   
 .navbar-links.active {
     display: flex;
-}
-
-main {
-    height: 55rem;
 }
 
 form input {
@@ -587,7 +589,7 @@ form input {
 
 .footer-info {
     height: 58rem;
-    margin-top: 8rem;
+    margin-top: -4rem;
 }
 
 
@@ -614,11 +616,6 @@ form input {
 }
 
 @media only screen and (max-width: 360px) {
-
-
-footer {
-    padding-top: 3rem;
-}
 
 
 .link-left {
