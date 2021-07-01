@@ -379,7 +379,8 @@ textarea:hover {
   }
   button.cta-subscribe {
     height: 40px;
-    width: 344px;
+    width: 100%;
+    font-size: 18px;
   }
 }
 /* Responsive Styling @550px and below */
@@ -452,6 +453,7 @@ button {
   padding: 10px 70px;
   margin: 15px 0;
   width: 343px;
+  font-size: 18px;
 }
 
 /* NAV BAR */

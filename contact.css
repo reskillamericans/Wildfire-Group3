@@ -34,7 +34,6 @@ p {
 }
 
 .brand-title {
-<<<<<<< HEAD
   font-size: 1.5rem;
   margin: 8px;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
@@ -43,16 +42,6 @@ p {
 
 .brand-title img {
   width: 150px;
-=======
-    font-size: 1.5rem ;
-    margin: 8px;
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-}
-
-.brand-title img {
-    width: 150px;
->>>>>>> 823deaa587ca956f35bdcdc45d10ce87367bb677
 }
 
 .navbar-links ul {
@@ -64,15 +53,9 @@ p {
 }
 
 .navbar-links li {
-<<<<<<< HEAD
   list-style: none;
   font-weight: bolder;
   text-transform: uppercase;
-=======
-    list-style: none;
-    font-weight: bolder;
-    text-transform: uppercase;
->>>>>>> 823deaa587ca956f35bdcdc45d10ce87367bb677
 }
 
 .navbar-links li a:hover {
@@ -97,7 +80,6 @@ p {
 }
 
 .toggle-button {
-<<<<<<< HEAD
   position: absolute;
   top: 0.25rem;
   right: 1rem;
@@ -106,16 +88,6 @@ p {
   justify-content: space-between;
   width: 30px;
   height: 21px;
-=======
-    position: absolute;
-    top: .25rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
->>>>>>> 823deaa587ca956f35bdcdc45d10ce87367bb677
 }
 
 .toggle-button .bar {
@@ -129,7 +101,6 @@ p {
 
 /******** Hero Image ********/
 .main-image {
-<<<<<<< HEAD
   box-sizing: border-box;
   display: block;
   width: 100%;
@@ -165,43 +136,6 @@ h1 {
   line-height: 1;
 }
 
-=======
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    height: 60vh;
-    padding: 0;
-    margin: 0;
-    background-image: url('images/contact-images/customersupport.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.image-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70vw;
-}
-
-h1 {
-    font-size: 37px;
-    font-weight: 700;
-}
-
-.image-text p {
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 1;
-}
-
->>>>>>> 823deaa587ca956f35bdcdc45d10ce87367bb677
 /******** Contact Form ********/
 
 form p {
@@ -250,21 +184,12 @@ sup {
 }
 
 button {
-<<<<<<< HEAD
   background: var(--primary);
   color: #fff;
   border: none;
   border-radius: 5px;
   padding: 10px 70px;
   width: 343px;
-=======
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 70px;
-    width: 343px;
->>>>>>> 823deaa587ca956f35bdcdc45d10ce87367bb677
 }
 
 button:hover {
@@ -305,7 +230,6 @@ footer {
   margin-bottom: 1.5rem;
 }
 #newsletter input {
-<<<<<<< HEAD
   margin-bottom: 1rem;
   border: none;
   border-radius: 4px;
@@ -315,17 +239,6 @@ footer {
 }
 ::placeholder {
   text-indent: 1rem;
-=======
-    margin-bottom: 1rem;
-    border: none;
-    border-radius: 4px;
-    color: var(--secondary_text);
-    padding: .5rem 0;
-    text-indent: 1rem;
-}
-::placeholder{
-    text-indent: 1rem;
->>>>>>> 823deaa587ca956f35bdcdc45d10ce87367bb677
 }
 
 ul.footer-links {
@@ -395,44 +308,35 @@ ul.footer-links {
     text-align: justify;
   }
 
-<<<<<<< HEAD
+  /* Footer */
+  .footer-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .subscribe {
+    align-self: start;
+  }
+  .social {
+    margin-top: 0;
+  }
+  #newsletter input {
+    padding: 0;
+    height: 40px;
+    width: 343px;
+    text-align: justify;
+  }
+
   button.cta-subscribe {
     height: 40px;
     width: 344px;
   }
-=======
-    /* Footer */
-   .footer-info {
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       justify-content: space-around;
-       padding-top: 2rem;
-       padding-bottom: 2rem;
-   }
-   .subscribe {
-       align-self: start;
-   }
-    .social {
-        margin-top: 0;
-    }
-   #newsletter input {
-        padding: 0;
-        height: 40px;
-        width: 343px;
-        text-align: justify;
-    }
-
-    button.cta-subscribe {
-        height: 40px;
-        width: 344px;
-    }
->>>>>>> 823deaa587ca956f35bdcdc45d10ce87367bb677
 }
 
-
 /* Responsive Styling 930px and up */
-<<<<<<< HEAD
 @media only screen and (min-width: 930px) {
   /* Nav */
   nav {
@@ -440,21 +344,12 @@ ul.footer-links {
     flex-wrap: nowrap;
     padding: 0 4rem;
   }
-=======
-@media only screen and (min-width: 930px){
-      /* Nav */
-      nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding: 0 4rem;
-    }
 
-    ul.nav-links {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-    }
->>>>>>> 823deaa587ca956f35bdcdc45d10ce87367bb677
+  ul.nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
 
   ul.nav-links {
     display: flex;
@@ -464,7 +359,6 @@ ul.footer-links {
 }
 
 /* Responsive Styling 768px and below */
-<<<<<<< HEAD
 @media only screen and (max-width: 768px) {
   /* Hero Section */
   h1 {
@@ -507,129 +401,6 @@ ul.footer-links {
     flex-direction: column;
     align-items: flex-start;
   }
-=======
-@media only screen and (max-width: 768px){
-    /* Hero Section */
-    h1 {
-        font-size: 1.75rem;
-    }
-
-    .image-text p {
-        font-size: 1.75rem;
-
-    }
-    /* Contact Form */
-    #contact-form {
-        margin: 15px;
-    }
-    #contact-form button {
-        width: 300px;
-    }
-    /* Footer */
-    #newsletter p {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 600px) {
-    /* Header */
-    .toggle-button {
-        display: flex;
-        width: 25px;
-        margin: 15px 20px;
-    }
-    .brand-title img {
-        width: 150px;
-        margin: 0 15px;
-    }
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-links ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-links li {
-        text-align: center;
-    }
-
-    .navbar-links li a {
-        padding: .5rem 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-}
-
-/* Responsive Styling @600px and below */
-@media only screen and (max-width: 600px){
-    /* Hero Section */
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .image-text p {
-        font-size: 1.5rem;
-    }
-    /* Contact Form */
-    #contact-form {
-        margin: 15px;
-    }
-    /* Footer */
-
-    .footer-info {
-        padding-right: 1.5rem;
-        padding-bottom: 1.5rem;
-        justify-content: left;
-    }
-
-    #subscribe-email,
-    .cta-subscribe {
-        width: 250px;
-    }
-
-}
-/* Responsive Styling @400px and below */
-@media only screen and (max-width: 400px){
-    /* Contact Form */
-    #contact-form {
-        margin: 10px;
-    }
-    #contact-form button {
-        width: 220px;
-    }
-    /* Hero Section */
-    h1 {
-        font-size: 1.25rem;
-    }
-    .image-text p {
-        font-size: 1.25rem;
-    }
-    /* Footer */
-    .footer-info {
-         padding-right: 1rem;
-         padding-bottom: 1rem;
-         justify-content: left;
-    }
-    #subscribe-email,
-    .cta-subscribe {
-        width: 220px;
-    }
-    .copyright p {
-        font-size: .75rem;
-        padding: 5px;
-    }
->>>>>>> 823deaa587ca956f35bdcdc45d10ce87367bb677
 
   .navbar-links ul {
     flex-direction: column;
@@ -672,7 +443,6 @@ ul.footer-links {
     justify-content: left;
   }
 
-<<<<<<< HEAD
   #subscribe-email,
   .cta-subscribe {
     width: 250px;
@@ -708,7 +478,45 @@ ul.footer-links {
     font-size: 0.75rem;
     padding: 5px;
   }
-}
-=======
 
->>>>>>> 823deaa587ca956f35bdcdc45d10ce87367bb677
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+/* Responsive Styling @600px and below */
+@media only screen and (max-width: 600px) {
+  /* Hero Section */
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .image-text p {
+    font-size: 1.5rem;
+  }
+  /* Contact Form */
+  #contact-form {
+    margin: 15px;
+  }
+  /* Footer */
+
+  .footer-info {
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    justify-content: left;
+  }
+}
