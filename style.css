@@ -457,12 +457,15 @@ button {
 }
 
 /* NAV BAR */
+/* NAV BAR */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   color: #180126;
+  padding: 0 64px 0 64px;
 }
 
 .brand-title {
@@ -662,6 +665,7 @@ button {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0;
   }
 
   .navbar-links ul {
