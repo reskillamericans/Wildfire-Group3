@@ -20,6 +20,7 @@ from fireapp import views as fireapp_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', fireapp_views.index, name="homepage"),
-    path('', include("fireapp.urls"))
+    path('', include("fireapp.urls")),
+    path('faq/', fireapp_views.faq, name="faq"),
 ]
 

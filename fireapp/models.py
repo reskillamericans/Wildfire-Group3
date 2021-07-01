@@ -39,3 +39,10 @@ class FireIncident(models.Model):
 class NewsletterEmailSub(models.Model):
     email = models.EmailField(unique=True)
     sign_up_date = models.DateTimeField(auto_now=True)
+
+class Faq(models.Model):
+    title = models.CharField(max_length=150)
+    response = models.TextField()
+
+    def __str__(self):
+        return f"{self.title}"
