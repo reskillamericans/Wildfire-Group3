@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render
 from django.core.mail import mail_admins, send_mail
 from .forms import CreateNewEmailSubscription
-from .models import NewsletterEmailSub
+from .models import NewsletterEmailSub, Faq
 
 # Create your views here.
 
@@ -29,6 +29,12 @@ def index(request):
 
     return render(request, "index.html")
 
+def faq(request):
+    context = {
+        "questions" : Faq.objects.all()
+    }
+
+    return render(request, "faq.html", context)
 
 
 
