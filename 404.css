@@ -122,16 +122,33 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0;
+  margin-bottom: 4rem;
+  color: #180126;
 }
 
 /* Styilng for the Error Box with Teal Background */
 .errorMessageBox {
   background-color: var(--secondary);
+  width: 90%;
 }
-img {
-  width: 85%;
+.errorMessageBox p {
+  padding: 0rem;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
 }
-
+img.errorImg {
+  width: 80%;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+.returnHome p {
+  margin: 3rem 1rem 0rem 1rem;
+}
+.returnHome button {
+  margin: 2rem 1rem;
+}
 /* Styling for Input Forms */
 label {
   font-size: 13px;
