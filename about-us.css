@@ -306,7 +306,15 @@ textarea {
   border: none;
   border-radius: 4px;
 }
-
+input:focus,
+textarea:focus,
+input:hover,
+textarea:hover {
+  border: 1px solid var(--primary) !important;
+  box-shadow: 0 0 5px var(--primary);
+  outline-offset: 0;
+  outline: none;
+}
 textarea {
   margin-bottom: 30px;
 }
@@ -322,7 +330,11 @@ button {
   padding: 10px 70px;
   width: 343px;
 }
-
+button:hover {
+  background-color: var(--background);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
 /* Footer */
 
 footer {
