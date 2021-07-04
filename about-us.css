@@ -42,7 +42,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--background);
+  background-color: white;
   color: #180126;
 }
 
