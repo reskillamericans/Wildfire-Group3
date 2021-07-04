@@ -22,5 +22,6 @@ urlpatterns = [
     path('', fireapp_views.index, name="homepage"),
     path('', include("fireapp.urls")),
     path('faq/', fireapp_views.faq, name="faq"),
+    path('contact/', fireapp_views.contact, name="contact"),
 ]
 

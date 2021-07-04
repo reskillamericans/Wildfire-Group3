@@ -36,7 +36,6 @@ def faq(request):
 
     return render(request, "faq.html", context)
 
+def contact(request):
 
-
-    
-    
+    return render(request, "contact.html")

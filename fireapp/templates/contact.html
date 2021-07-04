@@ -1,0 +1,107 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="images/fire-reporter-logo.ico">
+    <script src="https://kit.fontawesome.com/21d1f09dfc.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+
+<body>
+    <!-- Nav -->
+    <header>
+        <nav class="navbar">
+            <div class="brand-title"><img src="{% static 'images/fire-reporter-logo.png' %}"></div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about-us.html" >ABOUT</a></li>
+                    <li><a href="contact.html" class="active-link">CONTACT</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="main">
+        <div class="main-image">
+            <div class="image-text">
+                    <h1>Get In Touch With Us</h1>
+                    <p>We would love to hear from you.
+                        At FireReporter, we provide exceptional service we would love to experience ourselves.
+                        You have a fire outbreak news? Talk to a human!
+                    </p>
+            </div>
+        </div>
+
+        <form id="contact-form"  method="post">
+            <p>Enter Your Details</p>
+            <label for="contact-first-name">First Name<sup>*</sup></label>
+            <input id="contact-first-name" type="text" name="firstname" required><br>
+            <label for="contact-last-name">Last Name<sup>*</sup></label>
+            <input id="contact-last-name" type="text" name="lastname" required><br><label for="contact-email">Email<sup>*</sup></label>
+            <input id="contact-email" type="email" name="email" required><br>
+            <label for="contact-phone">Phone (optional)</label>
+            <input id="contact-phone" type="tel" name="phone"><br>
+            <label for="contact-location">State/County</label>
+            <input id="contact-location" type="text" name="location"><br>
+            <label for="contact-message">Message (max 200 characters)<sup>*</sup></label>
+            <textarea id="contact-message" name="message" rows="6" maxlength="200" required></textarea><br>
+            <button id="contact-form-submit" class="cta cta-subscribe" type="submit">Submit</button>
+        </form>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-info">
+            <form id="newsletter"  method="post">
+                <p class="bold">Want to join our Membership team?</p>
+                <p>Subscribe to our newsletter</p>
+                <input type="email" id="subscribe-email" name="email" placeholder="Enter Your Email">
+                <button class="cta cta-subscribe">Subscribe</button>
+            </form>
+            <div class="link-list">
+                <ul class="footer-links">
+                    <li>About Us</li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Customer Service Charter</a></li>
+                    <li><a href="#">Annual Reports</a></li>
+                    <li><a href="faq.html">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+            <div class="link-list">
+                <ul class="footer-links">
+                    <li>More</li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Data Privacy Statement</a></li>
+                    <li><a href="#">Follow Us on Twitter</a></li>
+                    <li><a href="#">Follow Us on Facebook</a></li>
+                    <li class="social">
+                        <a href="#"><i class="fab fa-lg fa-facebook-square icon"></i></a>
+                        <a href="#"><i class="fab fa-lg fa-twitter-square icon"></i></a>
+                        <a href="#"><i class="fab fa-lg fa-youtube-square icon"></i></a>
+                        <a href="#"><i class="fab fa-lg fa-instagram-square icon"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright 2021 FireReporter. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
