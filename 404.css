@@ -17,12 +17,15 @@ body {
   margin: 0;
 }
 h1 {
-  font-size: 34px;
-  font-weight: 400;
+  font-size: 100px;
+  font-weight: 700;
+  margin: 0;
+  padding: 1rem 0;
 }
 h2 {
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 2rem 0;
 }
 h3 {
   font-size: 21px;
@@ -42,7 +45,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: var(--background);
   color: #180126;
 }
 
@@ -112,32 +115,23 @@ p {
   color: white;
 }
 
-/* Header */
-header {
-  background-image: url("/images/404hero.svg");
-  object-fit: cover;
-  background-size: cover;
-  width: 100%;
+/* Styling for the Error Container */
+.errorContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 3rem;
-  color: var(--background);
-}
-.hero-text h1 {
-  margin-bottom: -20px;
-  padding-bottom: 0;
-}
-.hero-text {
-  align-items: center;
-  padding-top: 4rem;
   text-align: center;
-  width: 70%;
 }
-header h2 {
-  line-height: 150%;
+
+/* Styilng for the Error Box with Teal Background */
+.errorMessageBox {
+  background-color: var(--secondary);
 }
+img {
+  width: 85%;
+}
+
 /* Styling for Input Forms */
 label {
   font-size: 13px;
