@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/image files/group 3 logo (1).svg' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/1499ffcf76.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/faq.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+    <title>FAQs</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title"><a href="index.html"><img src="{% static 'images/image files/Logo & Name.svg' %}"></a></div>
+        <a href="#" class="toggle-button"> 
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="/" >HOME</a></li>
+                <li><a href="/about-us">ABOUT</a></li>
+                <li><a href="/contact-us">CONTACT</a></li>
+                <li><a href="/faq" class="active-link">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="banner">
+        <div class="banner-text">
+            <h1>Do you have questions?</h1>
+            <p>We've got all the answers for you (well, most of the times!)</p>
+            <p>Below, you will find answers to most of the Frequently Asked Questions you may have on FireReporter. If you don't find the answer you're looking for, feel free to reach us through, Contact Us.</p>
+        </div>
+        <form action="">
+            <input type="text" placeholder="Search for answers">
+            <i class="fas fa-search" id="glass"></i>
+        </form>
+    </section>
+    <main>
+        <div>
+            <h1>FAQs about FireReporter</h1>
+        </div>
+        <div class="container">
+ 
+            <div class="accordion">
+                {% for question in questions %}
+                    <div class="accordion-item">
+                        <a>{{ question.title }}</a>
+                        <div class="content">
+                            <p>{{ question.response }}</p>
+                    </div>
+                {% endfor %}
+
+              </div>
+              </div>
+            </div>
+           
+          </div>
+        <div class="download">
+            <h3>Read More...</h3>
+            <p>Download Our Mobile App for personalised help</p>
+            <button class="download-btn">Download</button>
+        </div>
+     </main>
+     <footer>
+        <div class="footer-info">
+            <form id="newsletter">
+                <p class="bold">Want to join our Membership team?</p>
+                <p>Subscribe to our newsletter</p>
+                <input type="email" id="subscribe-email" name="email" placeholder="Enter Your Email">
+                <button class="cta cta-subscribe">Subscribe</button>
+            </form>
+            <div class="link-list link-left">
+                <ul class="footer-links ">
+                    <li>About Us</li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Customer Service Charter</a></li>
+                    <li><a href="#">Annual Reports</a></li>
+                    <li><a href="#">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+            <div class="link-list link-right" >
+                <ul class="footer-links">
+                    <li>More</li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Data Privacy Statement</a></li>
+                    <li><a href="#">Follow Us on Twitter</a></li>
+                    <li><a href="#">Follow Us on Facebook</a></li>
+                    <li class="social">
+                        <a href="#"><i class="fab fa-facebook-square icon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square icon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-youtube-square icon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-instagram-square icon" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright 2021 FireReporter. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script src="{% static 'js/faq.js' %}"></script>
+</body>
+</html>

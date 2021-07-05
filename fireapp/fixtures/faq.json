@@ -1,0 +1,58 @@
+[
+    {
+        "model": "fireapp.Faq",
+        "fields":{
+            "title": "Do I need to have an account to check on the fire outbreak status?",
+            "response": "No, accounts are not necessary to use the app to verify fire outbreak status, as well as most of our features including reporting a fire outbreak."
+        }
+    },
+    {
+        "model": "fireapp.Faq",
+        "fields":{
+            "title": "The app is requesting access to my camera and photos. Why is that?",
+            "response": "One of the ways we track the location of reported fires is through the metadata recorded by smartphones into pictures when taken. By allowing access to the camera and photos it makes the act of reporting a fire outbreak much faster and convenient."
+        }
+    },
+    {
+        "model": "fireapp.Faq",
+        "fields":{
+            "title": "What is required to make a fire report?",
+            "response": "The items required to make a report are: Name, Phone Number, and Location, or Photo metadata."
+        }
+    },
+    {
+        "model": "fireapp.Faq",
+        "fields":{
+            "title": "How can I be updated for fire reports without having to check the app?",
+            "response": "With an account, you are able to receive notifications from us about fire outbreaks nearby your area. This way you do not need to always check the app to stay aware."
+        }
+    },
+    {
+        "model": "fireapp.Faq",
+        "fields":{
+            "title": "I have questions not answered the FAQ or in the About Us page, how can I find more info?",
+            "response": "Logged in members have access to the “Ask Me Anything” section where they can ask any questions about our service or fire outbreaks."
+        }
+    },
+    {
+        "model": "fireapp.Faq",
+        "fields":{
+            "title": "Can I track fires through the website, or do I need to download the app?",
+            "response": "Fire tracking can only be done through the app. "
+        }
+    },
+    {
+        "model": "fireapp.Faq",
+        "fields":{
+            "title": "What items should I have in my emergency bag?",
+            "response": "It is recommended to have the following items in your fire emergency bag: face masks or coverings, a three day supply of non-perishable food and three gallons of water per person, a map marked with at least two evacuation routes, prescriptions or special medications, a change of clothing, extra eyeglasses or contact lenses, an extra set of car keys, credit cards, cash or traveler’s checks, a first aid kit, a flashlight, portable phone chargers, sanitation supplies, and copies of important documents such as birth certificates, and passports."
+        }
+    },
+    {
+        "model": "fireapp.Faq",
+        "fields":{
+            "title": "What should I do in case of a fire?",
+            "response": "To know what to do in case of a fire, it is best to check out what the US government has to say about it here: https://www.ready.gov/home-fires."
+        }
+    }
+]

@@ -129,6 +129,16 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Email settings.
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'devops4zuri@gmail.com'
+EMAIL_HOST_PASSWORD = 'lowentio70'
+EMAIL_USE_TLS = True
 
+# Admins
+ADMINS = [('Devops', 'devops4zuri@gmail.com')]
 
 django_heroku.settings(locals())
+
+
