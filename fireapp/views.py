@@ -1,7 +1,7 @@
 from django.contrib import messages
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import mail_admins, send_mail
-from .forms import CreateNewEmailSubscription
+from .forms import CreateNewEmailSubscription, SubmitQuestion
 from .models import NewsletterEmailSub, Faq
 
 # Create your views here.
@@ -37,5 +37,14 @@ def faq(request):
     return render(request, "faq.html", context)
 
 def contact(request):
+    if request.method == 'POST':
+        form = SubmitQuestion(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your question has been submitted!')
+            return redirect('index')
+    else:
+        form = SubmitQuestion()
 
-    return render(request, "contact.html")
+    return render(request, "contact.html", {'form': form})
+

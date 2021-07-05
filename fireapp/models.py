@@ -1,6 +1,7 @@
 from django.db import models
-from django.db.models.fields import IntegerField
+from django.db.models.fields import CharField, DateTimeField, EmailField, IntegerField
 from datetime import datetime
+from django.utils import timezone
 
 # Create your models here.
 
@@ -46,3 +47,15 @@ class Faq(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+
+class Contact(models.Model):
+    first_name = CharField(max_length=50)
+    last_name = CharField(max_length=50)
+    email = EmailField(max_length=100)
+    phone = CharField(max_length=16, blank=True, null=True)
+    state = CharField(max_length=50, blank=True, null=True)
+    message = CharField(max_length=200)
+    time_posted = DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return f"{self.time_posted}"
