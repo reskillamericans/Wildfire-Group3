@@ -13,14 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import handler404, handler500
 from django.contrib import admin
 from django.urls import path, include
 from fireapp import views as fireapp_views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', fireapp_views.index, name="homepage"),
     path('', include("fireapp.urls")),
     path('faq/', fireapp_views.faq, name="faq"),
+   
 ]
 
+handler404 = 'fireapp.views.error_404'
