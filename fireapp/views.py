@@ -4,7 +4,12 @@ from django.core.mail import mail_admins, send_mail
 from .forms import CreateNewEmailSubscription
 from .models import NewsletterEmailSub, Faq
 
+
+
 # Create your views here.
+
+def error_404(request, exception):
+    return render(request, "404.html")
 
 def index(request):
     if request.method == 'POST':
