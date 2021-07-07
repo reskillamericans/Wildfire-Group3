@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models.fields import CharField, DateTimeField, EmailField, IntegerField
 from datetime import datetime
 from django.utils import timezone
+from phone_field import PhoneField
 
 # Create your models here.
 
@@ -52,7 +53,7 @@ class Contact(models.Model):
     first_name = CharField(max_length=50)
     last_name = CharField(max_length=50)
     email = EmailField(max_length=100)
-    phone = CharField(max_length=16, blank=True, null=True)
+    phone = PhoneField(blank=True, null=True)
     state = CharField(max_length=50, blank=True, null=True)
     message = CharField(max_length=200)
     time_posted = DateTimeField(default=timezone.now)
