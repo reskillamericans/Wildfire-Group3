@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.core.mail import mail_admins, send_mail
 from .forms import CreateNewEmailSubscription, SubmitQuestion
 from .models import NewsletterEmailSub, Faq
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -40,6 +41,19 @@ def contact(request):
     if request.method == 'POST':
         form = SubmitQuestion(request.POST)
         if form.is_valid():
+
+            receivers = []
+            for user in User.objects.filter(is_superuser=True):
+                receivers.append(user.email)
+
+            send_mail(
+                'New Question Received',
+                'A new question has been submitted. Please answer it as soon as possible',
+                None,
+                receivers,
+                fail_silently=False
+            )
+
             form.save()
             messages.success(request, 'Your question has been submitted!')
             return redirect('index')
