@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models.fields import CharField, DateTimeField, EmailField, IntegerField
+from django.db.models.fields import CharField, DateTimeField, EmailField
 from datetime import datetime
 from django.utils import timezone
 from django.core.validators import RegexValidator
@@ -41,6 +41,9 @@ class FireIncident(models.Model):
 class NewsletterEmailSub(models.Model):
     email = models.EmailField(unique=True)
     sign_up_date = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.email}"
 
 class Faq(models.Model):
     title = models.CharField(max_length=150)
