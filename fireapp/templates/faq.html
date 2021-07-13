@@ -32,11 +32,11 @@
             <span class="bar"></span>
         </a>
         <div class="navbar-links">
-            <ul class="nav-links">
-                <li><a href="{% url 'index' %}">HOME</a></li>
-                <li><a href="{% url 'about-us' %}">ABOUT</a></li>
-                <li><a href="{% url 'contact' %}">CONTACT</a></li>
-                <li><a href="{% url 'faq' %}" class="active-link">FAQ</a></li>
+            <ul>
+                <li><a href="{% url "homepage" %}">HOME</a></li>
+                <li><a href="{% url "about-us" %}" >ABOUT</a></li>
+                <li><a href="{% url "contact" %}" >CONTACT</a></li>
+                <li><a href="{% url "faq" %}" class="active-link">FAQ</a></li>
             </ul>
         </div>
     </nav>

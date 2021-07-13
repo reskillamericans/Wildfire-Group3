@@ -27,11 +27,11 @@
             <span class="bar"></span>
         </a>
         <div class="navbar-links">
-            <ul class="nav-links">
-                <li><a href="{% url 'index' %}"class="active-link">HOME</a></li>
-                <li><a href="{% url 'about-us' %}">ABOUT</a></li>
-                <li><a href="{% url 'contact' %}">CONTACT</a></li>
-                <li><a href="{% url 'faq' %}">FAQ</a></li>
+            <ul>
+                <li><a href="{% url "homepage" %}" class="active-link">HOME</a></li>
+                <li><a href="{% url "about-us" %}" >ABOUT</a></li>
+                <li><a href="{% url "contact" %}" >CONTACT</a></li>
+                <li><a href="{% url "faq" %}" >FAQ</a></li>
             </ul>
         </div>
     </nav>
