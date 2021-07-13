@@ -21,18 +21,17 @@
             {% endfor %}
         </ul>
         {% endif %}
-
         <a href="#" class="toggle-button"> 
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </a>
         <div class="navbar-links">
-            <ul>
-                <li><a href="#" class="active-link">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="/faq">FAQ</a></li>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}"class="active-link">HOME</a></li>
+                <li><a href="{% url 'about-us' %}">ABOUT</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                <li><a href="{% url 'faq' %}">FAQ</a></li>
             </ul>
         </div>
     </nav>

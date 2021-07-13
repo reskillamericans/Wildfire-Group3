@@ -20,6 +20,13 @@
     <header>
         <nav class="navbar">
             <div class="brand-title"><img src="{% static 'images/fire-reporter-logo.png' %}"></div>
+            {% if messages %}
+            <ul class="messages"  autocomplete="off">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
             <a href="#" class="toggle-button">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -27,10 +34,10 @@
             </a>
             <div class="navbar-links">
                 <ul class="nav-links">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about-us.html" >ABOUT</a></li>
-                    <li><a href="contact.html" class="active-link">CONTACT</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="{% url 'index' %}">HOME</a></li>
+                    <li><a href="{% url 'about-us' %}">ABOUT</a></li>
+                    <li><a href="{% url 'contact' %}" class="active-link">CONTACT</a></li>
+                    <li><a href="{% url 'faq' %}" >FAQ</a></li>
                 </ul>
             </div>
         </nav>
@@ -49,7 +56,7 @@
         <form id="contact-form"  method="post">
             <p>Enter Your Details</p>
             {% csrf_token %}
-            {{ form }}
+            {{ contact }}
             <button id="contact-form-submit" class="cta cta-subscribe" type="submit">Submit</button>
         </form>
     </section>
@@ -59,7 +66,9 @@
             <form id="newsletter"  method="post">
                 <p class="bold">Want to join our Membership team?</p>
                 <p>Subscribe to our newsletter</p>
-                <input type="email" id="subscribe-email" name="email" placeholder="Enter Your Email">
+                {% csrf_token %}
+                {{ newsletter }}
+                <!-- <input type="email" id="subscribe-email" name="email" placeholder="Enter Your Email"> -->
                 <button class="cta cta-subscribe">Subscribe</button>
             </form>
             <div class="link-list">
