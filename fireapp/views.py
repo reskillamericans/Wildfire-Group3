@@ -63,3 +63,5 @@ def contact(request):
 
     return render(request, "contact.html", {'form': form})
 
+def about_us(request):
+    return render(request, "about-us.html")
