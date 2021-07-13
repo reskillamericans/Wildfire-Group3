@@ -16,11 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from fireapp import views as fireapp_views
+import fireapp
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', fireapp_views.index, name="homepage"),
-    path('', include("fireapp.urls")),
-    path('faq/', fireapp_views.faq, name="faq"),
+    path('', include('fireapp.urls')),  
 ]
 

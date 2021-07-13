@@ -1,0 +1,209 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{% static 'css/about-us.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="{% static '/images/contact-images/fire-reporter-logo.ico' %}">
+    <script src="https://kit.fontawesome.com/21d1f09dfc.js" crossorigin="anonymous"></script>
+    <script src="{% static 'script.js' %}" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand-title"><img src="{% static 'images/fire-reporter-logo.png' %}" alt="fire reporter logo"></div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul class="nav-links">
+                <li><a href="{% url "homepage" %}">HOME</a></li>
+                <li><a href="{% url "about-us" %}" class="active-link">ABOUT</a></li>
+                <li><a href="{% url "contact" %}">CONTACT</a></li>
+                <li><a href="{% url "faq" %}">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="about">
+            <h1>About FireReporter</h1>
+            <h2>FireReporter is a life saver! It's an application that was inspired by the lack of a single source from
+                which
+                people can receive timely, accurate, and reliable information about wild fire outbreaks. Now you can
+                easily,
+                report and receive news about fire outbreaks from your phone.</h2>
+            <button class="getstarted">Get Started</button>
+        </div>
+    </header>
+    <!-- Carousel -->
+    <div class="container">
+        <h2>Meet our Team</h2>
+        <input type="radio" id="i1" name="images" checked />
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+        <input type="radio" id="i4" name="images" />
+
+        <div class="slide_img" id="one">
+            <div class="team-slide">
+                <div class="profile-card">
+                    <img src="{% static 'images/team-images/jadon.png' %}" alt="Image for Jadon'n">
+                    <h3>Jado’n Miguel<br>Rickenbacker</h3>
+                    <h4>UI/UX</h4>
+                    <p>Jado'n was responsible for the design and layout of Fire Reporter's mobile app.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="{% static 'images/team-images/collins.png' %}" alt="Image for Collins">
+                    <h3>Collins <br>Park</h3>
+                    <h4>UI/UX</h4>
+                    <p>Collins was responsible for the design and layout of Fire Reporter's website.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="{% static 'images/team-images/default.png' %}" alt="Image for Isidro">
+                    <h3>Isidro <br>Hernandez</h3>
+                    <h4>Front End</h4>
+                    <p>Isidro developed the FAQ page. </p>
+                </div>
+            </div>
+            <label class="prev" for="i4"></label>
+            <label class="next" for="i2"></label>
+        </div>
+
+        <div class="slide_img" id="two">
+            <div class="team-slide">
+                <div class="profile-card">
+                    <img src="{% static 'images/team-images/amy.JPG' %}" alt="Image for Amy">
+                    <h3>Amy <br>Funderberg</h3>
+                    <h4>Front End</h4>
+                    <p>Amy developed the website's Contact page.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="{% static 'images/team-images/sammy.JPG' %}" alt="Image for Sammy">
+                    <h3>Sammy <br>Elfatrany</h3>
+                    <h4>Front End</h4>
+                    <p>Sammy developed the website's Landing page.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="{% static 'images/team-images/dinah.jpg' %}" alt="Image for Dinah">
+                    <h3>Dinah <br>Brito</h3>
+                    <h4>Front End</h4>
+                    <p>Dinah developed the website's About Us page.</p>
+                </div>
+            </div>
+            <label class="prev" for="i1"></label>
+            <label class="next" for="i3"></label>
+        </div>
+
+        <div class="slide_img" id="three">
+            <div class="team-slide">
+                <div class="profile-card">
+                    <img src="{% static 'images/team-images/default.png' %}" alt="Image for Gabriel">
+                    <h3>Gabriel <br>Fuentes</h3>
+                    <h4>Back End</h4>
+                    <p>Gabriel developed the back end functionality for the website.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="{% static 'images/team-images/rolando.JPG' %}" alt="Image for Rolando">
+                    <h3>Rolando <br>Aniel</h3>
+                    <h4>Mobile</h4>
+                    <p>Rolando helped develop the mobile app and seed data into Firebase.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="{% static 'images/team-images/anya.jpg' %}" alt="Image for Anya">
+                    <h3>Mbah Anya <br>Sunday</h3>
+                    <h4>Mobile</h4>
+                    <p>Mbah developed the Register/Sign up page for the mobile app.</p>
+                </div>
+            </div>
+            <label class="prev" for="i2"></label>
+            <label class="next" for="i4"></label>
+        </div>
+
+        <div class="slide_img" id="four">
+            <div class="team-slide short">
+                <div class="profile-card">
+                    <img src="{% static 'images/team-images/leilani.JPG' %}" alt="Image for Leilani">
+                    <h3>Leilani <br>Allen</h3>
+                    <h4>Mobile</h4>
+                    <p>Leilani developed the Homepage for the mobile app.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="{% static 'images/team-images/amani.jpg' %}" alt="Image for Amani">
+                    <h3>Amani <br>Pitts</h3>
+                    <h4>Mobile</h4>
+                    <p>Amani developed the Splash and Onboarding screen for the mobile app.</p>
+                </div>
+            </div>
+            <label class="prev" for="i3"></label>
+            <label class="next" for="i1"></label>
+        </div>
+
+        <div id="nav_slide">
+            <label for="i1" class="dots" id="dot1"></label>
+            <label for="i2" class="dots" id="dot2"></label>
+            <label for="i3" class="dots" id="dot3"></label>
+            <label for="i4" class="dots" id="dot4"></label>
+        </div>
+
+    </div>
+
+    <!-- Call To Action Section -->
+    <div class="cta-container">
+        <div class="cta-text">
+            <h2>Find the most accurate news about fire outbreaks or simply share that information with us.</h2>
+        </div>
+        <div class="cta-img">
+            <img src="{% static 'images/fire-vector.svg' %}" alt="Fire Icon">
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-info">
+            <form id="newsletter">
+                <p class="bold">Want to join our Membership team?</p>
+                <p>Subscribe to our newsletter</p>
+                <input type="email" id="subscribe-email" name="email" placeholder="Enter Your Email">
+                <button class="cta cta-subscribe">Subscribe</button>
+            </form>
+            <div class="link-list">
+                <ul class="footer-links">
+                    <li>About Us</li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Customer Service Charter</a></li>
+                    <li><a href="#">Annual Reports</a></li>
+                    <li><a href="#">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+            <div class="link-list">
+                <ul class="footer-links">
+                    <li>More</li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Data Privacy Statement</a></li>
+                    <li><a href="#">Follow Us on Twitter</a></li>
+                    <li><a href="#">Follow Us on Facebook</a></li>
+                    <li class="social">
+                        <a href="#"><i class="fab fa-lg fa-facebook-square icon"></i></a>
+                        <a href="#"><i class="fab fa-lg fa-twitter-square icon"></i></a>
+                        <a href="#"><i class="fab fa-lg fa-youtube-square icon"></i></a>
+                        <a href="#"><i class="fab fa-lg fa-instagram-square icon"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright 2021 FireReporter. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

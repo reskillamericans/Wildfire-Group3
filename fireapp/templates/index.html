@@ -29,10 +29,10 @@
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a href="#" class="active-link">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="/faq">FAQ</a></li>
+                <li><a href="{% url "homepage" %}" class="active-link">HOME</a></li>
+                <li><a href="{% url "about-us" %}" >ABOUT</a></li>
+                <li><a href="{% url "contact" %}" >CONTACT</a></li>
+                <li><a href="{% url "faq" %}" >FAQ</a></li>
             </ul>
         </div>
     </nav>
