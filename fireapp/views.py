@@ -78,3 +78,6 @@ def newsletter_sub_request(request):
             mail_admins("New Newsletter Subscriber", message)
         else:
             messages.info(request, "You are already subscribed")
+
+def error_404(request, exception):
+    return render(request, "404.html")
