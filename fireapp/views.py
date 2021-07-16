@@ -14,6 +14,14 @@ def index(request):
 
     return render(request, "index.html")
 
+def search(request):
+    query=None
+    results=[]
+    if request.method=="GET":
+        query=request.Get.get('search')
+        results=Faq.objects.filter(Q(title__icontains=query) | Q(response__icontains=query | Q(footer__icontains==query)))
+    return render(request, 'search.html', {'query': query, 
+                                           'results': results})
 def faq(request):
     context = {
         "questions" : Faq.objects.all()
