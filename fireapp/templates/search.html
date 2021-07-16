@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<script>
+
+</script>
+
+
+<body>
+    {% if query %}
+    <h1> Posts containing "{{ query }}"</h1>
+                <h3>
+                {% with results.count as total_results %}
+                Found {{ total_results }} result{{ total_results|pluralize }}
+                {% endwith %}
+                </h3>
+        {% for c in results %}
+        <a href="{{c.get_absolute_url}}"><h3>{{c.title}}</h3></a>
+         <h3>{{c.footer}}</h3>
+
+
+        {% empty %}
+        <h4>There are no results for your query.</h4>
+        {% endfor %}
+    
+    {% else %}
+        <h2>NO QUERY ERROR </h2>
+    {% endif %}
+
+            </body>
