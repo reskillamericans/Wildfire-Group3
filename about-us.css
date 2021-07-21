@@ -159,7 +159,7 @@ header h2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
-  align-items: center;
+  /*align-items: center;*/
   column-gap: 1rem;
   text-align: center;
   background: white;
