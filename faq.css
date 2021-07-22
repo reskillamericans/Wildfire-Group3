@@ -616,6 +616,7 @@ form input {
 }
 .copyright p {
     font-weight: 400;
+    font-size: .8rem;
 }
 
 }
@@ -647,6 +648,10 @@ form input {
 
 .download button {
     width: 72%;
+}
+
+.copyright p {
+    font-size: .76rem;
 }
 
 }
