@@ -382,7 +382,7 @@ textarea:hover {
     width: 100%;
     font-size: 18px;
   }
-}
+
 /* Responsive Styling @550px and below */
 @media only screen and (max-width: 550px) {
   .footer-info {
