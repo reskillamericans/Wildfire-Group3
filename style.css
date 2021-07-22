@@ -382,7 +382,7 @@ textarea:hover {
     width: 100%;
     font-size: 18px;
   }
-}
+
 /* Responsive Styling @550px and below */
 @media only screen and (max-width: 550px) {
   .footer-info {
@@ -452,7 +452,7 @@ button {
   border-radius: 5px;
   padding: 10px 70px;
   margin: 15px 0;
-  width: 343px;
+  width: 342px;
   font-size: 18px;
 }
 
@@ -718,6 +718,9 @@ button {
   #subscribe-email,
   .cta-subscribe {
     width: 220px;
+  }
+  .copyright p {
+    font-size: .75rem;
   }
 }
 
