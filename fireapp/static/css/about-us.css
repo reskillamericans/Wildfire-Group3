@@ -1,655 +1,655 @@
 /* Color */
 :root {
-    --background: #f9f9f9;
-    --primary_text: #333333;
-    --secondary_text: #797474;
-    --tertiary_text: #c3c7d2;
-    --primary: #ff8b00;
-    --secondary: #089285;
+  --background: #f9f9f9;
+  --primary_text: #333333;
+  --secondary_text: #797474;
+  --tertiary_text: #c3c7d2;
+  --primary: #ff8b00;
+  --secondary: #089285;
+}
+/* Typography */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--primary_text);
+  background-color: white;
+  margin: 0;
+}
+h1 {
+  font-size: 10vw;
+  font-weight: 400;
+}
+h2 {
+  font-size: 5vw;
+  font-weight: 400;
+}
+h3 {
+  font-size: 21px;
+  font-weight: 400;
+}
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* NAV BAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: #180126;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 8px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.brand-title img {
+  width: 150px;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  font-weight: bolder;
+  text-transform: uppercase;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.navbar-links li a:hover {
+  color: #ff8b00;
+}
+
+.navbar-links li a:active {
+  color: #ff8b00;
+}
+
+.active-link {
+  color: var(--primary) !important;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #180126;
+  font-size: 16px;
+  padding: 1rem;
+  display: block;
+  text-transform: capitalize;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.25rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  border-color: black;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Header */
+header {
+  background-image: url("../images/header-fire.svg");
+  object-fit: cover;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+  margin-bottom: 4rem;
+}
+.about {
+  margin: 0rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+header h1 {
+  margin: 0 1rem;
+}
+header h2 {
+  line-height: 42px;
+  margin: 2rem 1rem;
+}
+
+/* Carousel */
+#i1,
+#i2,
+#i3,
+#i4,
+#i5 {
+  display: none;
+}
+.container h2 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.team-slide {
+  height: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  /*align-items: center;*/
+  column-gap: 1rem;
+  text-align: center;
+  background: white;
+}
+.profile-card {
+  background: white;
+  vertical-align: top;
+}
+.profile-card img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 80%;
+  height: 0;
+  padding-bottom: 38%;
+  user-select: none;
+  border-radius: 10px;
+}
+.container .slide_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.prev,
+.next {
+  width: 5%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  cursor: pointer;
+}
+.next {
+  right: 0;
+  background-image: url('../images/team-images/right.svg');
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  margin-right: -20px;
+}
+.prev {
+  left: 0;
+  background-image: url('../images/team-images/left.svg');
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  margin-left: -20px;
+}
+
+label span {
+  position: absolute;
+  font-size: 100pt;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container #nav_slide {
+  width: 100%;
+  bottom: 5%;
+  height: 11px;
+  position: absolute;
+  text-align: center;
+  z-index: 99;
+  cursor: default;
+}
+
+#nav_slide .dots {
+  top: 30px;
+  width: 18px;
+  height: 18px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.4s;
+}
+
+#nav_slide .dots:hover {
+  cursor: pointer;
+  background-color: #b8b4b4;
+}
+
+.slide_img {
+  z-index: -1;
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three,
+#i4:checked ~ #four {
+  z-index: 9;
+  animation: scroll 0s ease-in-out;
+}
+
+#i1:checked ~ #nav_slide #dot1,
+#i2:checked ~ #nav_slide #dot2,
+#i3:checked ~ #nav_slide #dot3,
+#i4:checked ~ #nav_slide #dot4 {
+  background-color: #b8b4b4;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0.4;
   }
-  /* Typography */
-  body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--primary_text);
-    background-color: white;
-    margin: 0;
+  100% {
+    opacity: 1;
   }
+}
+
+/* Section Call to Action */
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+.cta-container div:first-child {
+  order: 2;
+}
+.cta.img {
+  width: 84px;
+}
+/* Styling for Input Forms */
+label {
+  font-size: 13px;
+  font-weight: 700;
+  padding-top: 15px;
+}
+
+input,
+textarea {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #ececec;
+  border: none;
+  border-radius: 4px;
+}
+input:focus,
+textarea:focus,
+input:hover,
+textarea:hover {
+  border: 1px solid var(--primary) !important;
+  box-shadow: 0 0 5px var(--primary);
+  outline-offset: 0;
+  outline: none;
+}
+textarea {
+  margin-bottom: 30px;
+}
+sup {
+  color: #ff0000;
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 70px;
+  width: 343px;
+}
+button:hover {
+  background-color: var(--background);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+/* Footer */
+
+footer {
+  justify-content: center;
+}
+.bold {
+  font-weight: 700;
+  font-size: 21px;
+}
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #c4c4c4;
+  padding-left: 3rem;
+  padding-right: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.footer-info h3 {
+  font-weight: 700;
+  font-size: 16px;
+}
+#newsletter {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+#newsletter input {
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+  color: var(--secondary_text);
+  padding: 0.5rem 0;
+  text-indent: 1rem;
+}
+::placeholder {
+  text-indent: 1rem;
+}
+
+ul.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  padding: 10px 0;
+}
+.footer-links li:first-child {
+  font-weight: 700;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--primary_text);
+}
+.footer-links a:hover {
+  color: var(--primary);
+}
+.social {
+  margin-top: 2rem;
+  display: flex;
+}
+.social i {
+  margin-right: 2rem;
+  width: 21px;
+}
+.copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #63625b;
+  margin: 0;
+  padding: 0;
+  color: var(--background);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.copyright p {
+  align-self: center;
+}
+
+/* Responsive Styling @400px and up */
+@media only screen and (min-width: 400px) {
   h1 {
-    font-size: 10vw;
-    font-weight: 400;
+    font-size: 7vw;
   }
   h2 {
-    font-size: 5vw;
-    font-weight: 400;
+    font-size: 3vw;
   }
-  h3 {
-    font-size: 21px;
-    font-weight: 400;
+  header {
+    height: 73vh;
   }
-  p {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 20px;
+  button.getstarted {
+    margin-left: 1rem;
   }
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* NAV BAR */
-  .navbar {
+  /* Call to Action Section */
+  .cta-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    color: #180126;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
   }
-  
-  .brand-title {
-    font-size: 1.5rem;
-    margin: 8px;
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    font-weight: bolder;
+  .cta-container div:first-child {
+    order: -1;
   }
-  
+  .cta-text {
+    width: 50vw;
+  }
+  .cta-img {
+    margin-left: 3rem;
+  }
+  /* Footer */
+  .footer-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .subscribe {
+    align-self: start;
+  }
+  .social {
+    margin-top: 0;
+  }
+  #newsletter input {
+    padding: 0;
+    height: 40px;
+    width: 343px;
+    text-align: justify;
+  }
+
+  button.cta-subscribe {
+    height: 40px;
+    width: 344px;
+  }
+}
+/* Responsive Styling 768px and below */
+@media only screen and (max-width: 768px) {
+  /* Footer */
+  #newsletter p {
+    font-size: 16px;
+  }
+}
+
+/* Responsive Styling 930px and up */
+@media only screen and (min-width: 930px) {
+  /* Nav */
+  nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 4rem;
+  }
+
+  ul.nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+  /* Header */
+  .about {
+    margin: 0rem 4rem;
+  }
+  h1 {
+    font-size: 37px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .team-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .team-card {
+    width: 30%;
+    padding: 3rem;
+  }
+}
+
+/* Responsive styling for screens 600px and under */
+@media (max-width: 600px) {
+  /* Nav styling */
+  .toggle-button {
+    display: flex;
+    width: 25px;
+    margin: 15px 20px;
+  }
   .brand-title img {
     width: 150px;
+    margin: 0 15px;
   }
-  
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .navbar-links ul {
-    margin: 0;
-    padding: 0;
-    font-weight: bolder;
-    text-transform: uppercase;
-    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
-  
   .navbar-links li {
-    list-style: none;
-    font-weight: bolder;
-    text-transform: uppercase;
+    text-align: center;
   }
-  
-  .navbar-links li a:hover {
-    color: #ff8b00;
-  }
-  
-  .navbar-links li a:active {
-    color: #ff8b00;
-  }
-  
-  .active-link {
-    color: var(--primary) !important;
-  }
-  
   .navbar-links li a {
-    text-decoration: none;
-    color: #180126;
-    font-size: 16px;
-    padding: 1rem;
-    display: block;
-    text-transform: capitalize;
+    padding: 0.5rem 1rem;
   }
-  
-  .toggle-button {
-    position: absolute;
-    top: 0.25rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-  }
-  
-  .toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    border-color: black;
-    background-color: black;
-    border-radius: 10px;
-    color: white;
-  }
-  
-  /* Header */
-  header {
-    background-image: url("../images/header-fire.svg");
-    object-fit: cover;
-    width: 100%;
-    background-size: cover;
+  .navbar-links.active {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 3rem;
-    margin-bottom: 4rem;
   }
-  .about {
-    margin: 0rem 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-top: 4rem;
+  /* Footer */
+
+  .footer-info {
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    justify-content: left;
   }
-  
-  header h1 {
-    margin: 0 1rem;
+
+  #subscribe-email,
+  .cta-subscribe {
+    width: 250px;
   }
-  header h2 {
-    line-height: 42px;
-    margin: 2rem 1rem;
+}
+/* Responsive Styling @400px and below */
+@media only screen and (max-width: 400px) {
+  /* Footer */
+  .footer-info {
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    justify-content: left;
   }
-  
-  /* Carousel */
-  #i1,
-  #i2,
-  #i3,
-  #i4,
-  #i5 {
-    display: none;
+  #subscribe-email,
+  .cta-subscribe {
+    width: 220px;
   }
-  .container h2 {
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  .copyright p {
+    font-size: 0.75rem;
+    padding: 5px;
   }
-  .team-slide {
-    height: inherit;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-around;
-    align-items: center;
-    column-gap: 1rem;
-    text-align: center;
-    background: white;
-  }
-  .profile-card {
-    background: white;
-    vertical-align: top;
-  }
-  .profile-card img {
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  
+}
+/* responsive styling for carousel */
+@media screen and (max-width: 375px) {
   .container {
-    margin: 0 auto;
-    position: relative;
+    border: none;
     width: 80%;
     height: 0;
-    padding-bottom: 38%;
-    user-select: none;
-    border-radius: 10px;
+    padding-bottom: 55%;
   }
-  .container .slide_img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  label span {
+    font-size: 50pt;
   }
   .prev,
   .next {
-    width: 5%;
-    height: inherit;
-    position: absolute;
-    top: 0;
-    z-index: 99;
-    cursor: pointer;
+    width: 10%;
   }
-  .next {
-    right: 0;
-    background-image: url('../images/team-images/right.svg');
-    background-size: 30%;
-    background-repeat: no-repeat;
-    background-position: right center;
-    margin-right: -20px;
-  }
-  .prev {
-    left: 0;
-    background-image: url('../images/team-images/left.svg');
-    background-size: 30%;
-    background-repeat: no-repeat;
-    background-position: left center;
-    margin-left: -20px;
-  }
-  
-  label span {
-    position: absolute;
-    font-size: 100pt;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .container #nav_slide {
-    width: 100%;
-    bottom: 5%;
-    height: 11px;
-    position: absolute;
-    text-align: center;
-    z-index: 99;
-    cursor: default;
-  }
-  
   #nav_slide .dots {
-    top: 30px;
-    width: 18px;
-    height: 18px;
-    margin: 0 4px;
-    position: relative;
-    border-radius: 100%;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.6);
-    transition: 0.4s;
+    width: 5px;
+    height: 5px;
   }
-  
-  #nav_slide .dots:hover {
-    cursor: pointer;
-    background-color: #b8b4b4;
+  .team-slide {
+    column-gap: 1rem;
   }
-  
-  .slide_img {
-    z-index: -1;
+
+  .profile-card h3,
+  .profile-card h4 {
+    font-size: 8px;
   }
-  
-  #i1:checked ~ #one,
-  #i2:checked ~ #two,
-  #i3:checked ~ #three,
-  #i4:checked ~ #four {
-    z-index: 9;
-    animation: scroll 0s ease-in-out;
+  .profile-card p {
+    display: none;
   }
-  
-  #i1:checked ~ #nav_slide #dot1,
-  #i2:checked ~ #nav_slide #dot2,
-  #i3:checked ~ #nav_slide #dot3,
-  #i4:checked ~ #nav_slide #dot4 {
-    background-color: #b8b4b4;
-  }
-  
-  @keyframes scroll {
-    0% {
-      opacity: 0.4;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Section Call to Action */
-  .cta-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-  }
-  .cta-container div:first-child {
-    order: 2;
-  }
-  .cta.img {
-    width: 84px;
-  }
-  /* Styling for Input Forms */
-  label {
-    font-size: 13px;
-    font-weight: 700;
-    padding-top: 15px;
-  }
-  
-  input,
-  textarea {
-    margin: 5px 0;
-    padding: 10px;
-    background-color: #ececec;
+}
+/* Repsonsive styling for Carousel */
+@media screen and (max-width: 1100px) {
+  .container {
     border: none;
-    border-radius: 4px;
+    width: 75%;
+    height: 0;
   }
-  input:focus,
-  textarea:focus,
-  input:hover,
-  textarea:hover {
-    border: 1px solid var(--primary) !important;
-    box-shadow: 0 0 5px var(--primary);
-    outline-offset: 0;
-    outline: none;
+
+  label span {
+    font-size: 50pt;
   }
-  textarea {
-    margin-bottom: 30px;
+
+  .prev,
+  .next {
+    width: 10%;
   }
-  sup {
-    color: #ff0000;
+  #nav_slide .dots {
+    width: 12px;
+    height: 12px;
   }
-  
-  button {
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 70px;
-    width: 343px;
+  .team-slide {
+    column-gap: 1rem;
   }
-  button:hover {
-    background-color: var(--background);
-    border: 1px solid var(--primary);
-    color: var(--primary);
+
+  .profile-card h3,
+  .profile-card h4 {
+    font-size: 12px;
   }
-  /* Footer */
-  
-  footer {
-    justify-content: center;
+
+  .profile-card p {
+    display: none;
   }
-  .bold {
-    font-weight: 700;
-    font-size: 21px;
+  .profile-card img {
+    width: 70%;
   }
-  .footer-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #c4c4c4;
-    padding-left: 3rem;
-    padding-right: 2.5rem;
-    padding-bottom: 2.5rem;
+}
+@media only screen and (max-width: 930px) and (min-width: 600px) {
+  nav {
+    padding: 0 4rem;
   }
-  .footer-info h3 {
-    font-weight: 700;
-    font-size: 16px;
-  }
-  #newsletter {
-    display: grid;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-  #newsletter input {
-    margin-bottom: 1rem;
-    border: none;
-    border-radius: 4px;
-    color: var(--secondary_text);
-    padding: 0.5rem 0;
-    text-indent: 1rem;
-  }
-  ::placeholder {
-    text-indent: 1rem;
-  }
-  
-  ul.footer-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  .footer-links li {
-    padding: 10px 0;
-  }
-  .footer-links li:first-child {
-    font-weight: 700;
-  }
-  
-  .footer-links a {
-    text-decoration: none;
-    color: var(--primary_text);
-  }
-  .footer-links a:hover {
-    color: var(--primary);
-  }
-  .social {
-    margin-top: 2rem;
-    display: flex;
-  }
-  .social i {
-    margin-right: 2rem;
-    width: 21px;
-  }
-  .copyright {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #63625b;
-    margin: 0;
-    padding: 0;
-    color: var(--background);
-    font-size: 1rem;
-    font-weight: 700;
-  }
-  
-  .copyright p {
-    align-self: center;
-  }
-  
-  /* Responsive Styling @400px and up */
-  @media only screen and (min-width: 400px) {
-    h1 {
-      font-size: 7vw;
-    }
-    h2 {
-      font-size: 3vw;
-    }
-    header {
-      height: 73vh;
-    }
-    button.getstarted {
-      margin-left: 1rem;
-    }
-    /* Call to Action Section */
-    .cta-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin-top: 10rem;
-      margin-bottom: 5rem;
-    }
-    .cta-container div:first-child {
-      order: -1;
-    }
-    .cta-text {
-      width: 50vw;
-    }
-    .cta-img {
-      margin-left: 3rem;
-    }
-    /* Footer */
-    .footer-info {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-    }
-    .subscribe {
-      align-self: start;
-    }
-    .social {
-      margin-top: 0;
-    }
-    #newsletter input {
-      padding: 0;
-      height: 40px;
-      width: 343px;
-      text-align: justify;
-    }
-  
-    button.cta-subscribe {
-      height: 40px;
-      width: 344px;
-    }
-  }
-  /* Responsive Styling 768px and below */
-  @media only screen and (max-width: 768px) {
-    /* Footer */
-    #newsletter p {
-      font-size: 16px;
-    }
-  }
-  
-  /* Responsive Styling 930px and up */
-  @media only screen and (min-width: 930px) {
-    /* Nav */
-    nav {
-      display: flex;
-      flex-wrap: nowrap;
-      padding: 0 4rem;
-    }
-  
-    ul.nav-links {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: flex-end;
-    }
-    /* Header */
-    .about {
-      margin: 0rem 4rem;
-    }
-    h1 {
-      font-size: 37px;
-    }
-    h2 {
-      font-size: 28px;
-    }
-    .team-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
-    .team-card {
-      width: 30%;
-      padding: 3rem;
-    }
-  }
-  
-  /* Responsive styling for screens 600px and under */
-  @media (max-width: 600px) {
-    /* Nav styling */
-    .toggle-button {
-      display: flex;
-      width: 25px;
-      margin: 15px 20px;
-    }
-    .brand-title img {
-      width: 150px;
-      margin: 0 15px;
-    }
-    .navbar-links {
-      display: none;
-      width: 100%;
-    }
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .navbar-links ul {
-      flex-direction: column;
-      width: 100%;
-    }
-    .navbar-links li {
-      text-align: center;
-    }
-    .navbar-links li a {
-      padding: 0.5rem 1rem;
-    }
-    .navbar-links.active {
-      display: flex;
-    }
-    /* Footer */
-  
-    .footer-info {
-      padding-right: 1.5rem;
-      padding-bottom: 1.5rem;
-      justify-content: left;
-    }
-  
-    #subscribe-email,
-    .cta-subscribe {
-      width: 250px;
-    }
-  }
-  /* Responsive Styling @400px and below */
-  @media only screen and (max-width: 400px) {
-    /* Footer */
-    .footer-info {
-      padding-right: 1rem;
-      padding-bottom: 1rem;
-      justify-content: left;
-    }
-    #subscribe-email,
-    .cta-subscribe {
-      width: 220px;
-    }
-    .copyright p {
-      font-size: 0.75rem;
-      padding: 5px;
-    }
-  }
-  /* responsive styling for carousel */
-  @media screen and (max-width: 375px) {
-    .container {
-      border: none;
-      width: 80%;
-      height: 0;
-      padding-bottom: 55%;
-    }
-    label span {
-      font-size: 50pt;
-    }
-    .prev,
-    .next {
-      width: 10%;
-    }
-    #nav_slide .dots {
-      width: 5px;
-      height: 5px;
-    }
-    .team-slide {
-      column-gap: 1rem;
-    }
-  
-    .profile-card h3,
-    .profile-card h4 {
-      font-size: 8px;
-    }
-    .profile-card p {
-      display: none;
-    }
-  }
-  /* Repsonsive styling for Carousel */
-  @media screen and (max-width: 1100px) {
-    .container {
-      border: none;
-      width: 75%;
-      height: 0;
-    }
-  
-    label span {
-      font-size: 50pt;
-    }
-  
-    .prev,
-    .next {
-      width: 10%;
-    }
-    #nav_slide .dots {
-      width: 12px;
-      height: 12px;
-    }
-    .team-slide {
-      column-gap: 1rem;
-    }
-  
-    .profile-card h3,
-    .profile-card h4 {
-      font-size: 12px;
-    }
-  
-    .profile-card p {
-      display: none;
-    }
-    .profile-card img {
-      width: 70%;
-    }
-  }
-  @media only screen and (max-width: 930px) and (min-width: 600px) {
-    nav {
-      padding: 0 4rem;
-    }
-  }
+}
