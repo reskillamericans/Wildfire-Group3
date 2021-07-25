@@ -724,6 +724,12 @@ button {
   }
 }
 
+@media only screen and (max-width: 930px) {
+  .gridpiece h2 {
+    font-size: 1.6rem;
+  }
+}
+
 
 @media only screen and (max-width: 930px) and (min-width: 600px) {
   nav {
