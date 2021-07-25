@@ -46,18 +46,10 @@
             <p>We've got all the answers for you (well, most of the times!)</p>
             <p>Below, you will find answers to most of the Frequently Asked Questions you may have on FireReporter. If you don't find the answer you're looking for, feel free to reach us through, Contact Us.</p>
         </div>
-        <form action="{% url 'fireapp:search' %}" class="form-inline" method="get">
-            #<input type="text" placeholder="Search for answers">
-            #<i class="fas fa-search" id="glass"></i>
-        
-                <div class="form-group mb-2">
-                    <h1>{% if category %}{{ category.name }}{% else %} FAQs {% endif %}</h1>
-                </div>
-                <div class="form-group mx-sm-3 mb-2"> 
-                <label for="" class="sr-only">search</label>
-                <input name="search" type="" class="form-control" id="" placeholder="type for search">
-                </div>
-            <button type="submit" class="btn btn-primary btn-lg mb-2">search</button>
+        <form type="get" action="." style="margin:0">
+             <input id="search_box" type="text"
+             name="search_box" placeholder="Search...">
+             <button id="search_submit" type="submit" >Submit</button>
         </form>
     </section>
     <main>
