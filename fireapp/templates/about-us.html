@@ -179,7 +179,7 @@
                 <p class="bold">Want to join our Membership team?</p>
                 <p>Subscribe to our newsletter</p>
                   {% csrf_token %}
-                  {{form}}
+                  {{ newsletter }}
                 <input type="email" id="subscribe-email" name="email" placeholder="Enter Your Email">
                 <button class="cta cta-subscribe">Subscribe</button>
             </form>

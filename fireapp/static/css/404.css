@@ -1,0 +1,98 @@
+/* Color */
+:root {
+    --background: #f9f9f9;
+    --primary_text: #333333;
+    --secondary_text: #797474;
+    --tertiary_text: #c3c7d2;
+    --primary: #ff8b00;
+    --secondary: #089285;
+  }
+  /* Typography */
+  body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary_text);
+    background-color: white;
+    margin: 0;
+  }
+  h1 {
+    font-size: 75px;
+    font-weight: 700;
+    margin: 0;
+    padding: 1rem 0;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 2rem 0;
+  }
+  h3 {
+    font-size: 21px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the Error Container */
+  .errorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    color: #180126;
+  }
+  
+  /* Styilng for the Error Box with Teal Background */
+  .errorMessageBox {
+    background-color: var(--secondary);
+    width: 90%;
+  }
+  .errorMessageBox p {
+    padding: 0rem;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  img.errorImg {
+    width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  .returnHome p {
+    margin: 3rem 1rem 0rem 1rem;
+  }
+  .returnHome button {
+    margin: 2rem 1rem;
+  }
+  /* Styling for Input Forms */
+  
+  button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 70px;
+    width: 343px;
+  }
+  button:hover {
+    background-color: var(--background);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+  }
+  
+  /* Responsive Styling 768px and below */
+  @media only screen and (max-width: 768px) {
+    .errorContainer {
+      height: 90vh;
+      margin: 1rem 2rem;
+    }
+  }
