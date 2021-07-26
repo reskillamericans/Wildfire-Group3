@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 - Error</title>
-    <link rel="stylesheet" href={% static 'css/404.css' %} />
+    <link rel="stylesheet" href="404.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-   <link rel="icon" type="image/ico" href="{% static 'images/contact-images/fire-reporter-logo.ico' %}">
-   <script
+    <link rel="icon" type="image/ico" href="/images/fire-reporter-logo.ico" />
+    <script
       src="https://kit.fontawesome.com/21d1f09dfc.js"
       crossorigin="anonymous"
     ></script>
@@ -27,7 +27,7 @@
         <h1>404</h1>
         <p>OOPS! ...PAGE NOT FOUND</p>
         <img
-          src="{% static 'images/broken_connection.svg' %}"
+          src="images/broken_connection.svg"
           alt="An illustration of a power cord that is broken with a fire"
           class="errorImg"
         />
@@ -36,7 +36,7 @@
         <p>
           The link you followed may be broken or the page may have been removed.
         </p>
-        <a href="{% url "homepage" %}">
+        <a href="index.html">
           <button class="goHomeBtn">Go Home</button>
         </a>
       </div>
