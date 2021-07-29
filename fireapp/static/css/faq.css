@@ -19,7 +19,7 @@ html {
 body {
     width: 100%;
     height: 100%;
-    background-color: #f9f9f9;
+    background-color: #F9F9F9;
     color: #333333;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -72,20 +72,20 @@ ul {
 }
 
 .active-link {
-    color: #ff8b00 !important;
+    color: #FF8B00 !important;
 }
 
 li {
     list-style: none;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .navbar-links li a:hover {
-    color: #ff624c;
+    color: #FF624C;
 }
 
 .navbar-links li a:active {
-    color: #ff624c;
+    color: #FF624C;
 }
 
 .navbar-links li a {
@@ -181,7 +181,7 @@ form i {
     padding: .33rem;
     padding-left: 1rem;
     padding-bottom: .5rem;
-    background-color: #ff8b00;
+    background-color: #FF8B00;
     border-radius: 5px;
     margin-left: 0px;
     transform: translate(-.5rem);
@@ -266,7 +266,7 @@ h1 {
 .accordion .content p {
     font-size: 1rem;
     font-weight: 300;
-    width: 80%;
+    text-align: justify;
     padding-left: 1.8rem;
 }
 
@@ -301,15 +301,15 @@ h1 {
     height: 2rem;
     border-radius: 5px;
     border: none;
-    background-color: #ff8b00;
-    color: #f9f9f9;
+    background-color: #FF8B00;
+    color: #F9F9F9;
 }
 
 .download button:hover {
-    background-color: #f9f9f9;
-    color: #ff8b00;
+    background-color: #F9F9F9;
+    color: #FF8B00;
     cursor: pointer;
-    border: 1px solid #ff8b00;
+    border: 1px solid #FF8B00;
 }
 
 
@@ -328,7 +328,7 @@ footer {
     height: 20rem;
     display: flex;
     flex-direction: column;
-    background-color: #c4c4c4;
+    background-color: #C4C4C4;
     padding-left: 3rem;
     padding-right: 3rem;
     padding-bottom: 2rem;
@@ -387,7 +387,7 @@ ul.footer-links {
 }
 
 .footer-links a:hover {
-    color: #ff8b00;
+    color: #FF8B00;
 }
 
 .social {
@@ -405,19 +405,19 @@ ul.footer-links {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #63625b;
+    background-color: #63625B;
     margin: 0;
     padding: 0;
-    color: #f9f9f9;
+    color: #F9F9F9;
     font-size: 1rem;
     font-weight: 400;
     height: 3rem;
 }
 
 .cta-subscribe:hover {
-    background-color: #f9f9f9;
-    color: #ff8b00;
-    border: 1px solid #ff8b00;
+    background-color: #F9F9F9;
+    color: #FF8B00;
+    border: 1px solid #FF8B00;
 }
 
 .footer-info {
@@ -444,7 +444,7 @@ ul.footer-links {
     text-align: justify;
 }
 
-::placeholder {
+ ::placeholder {
     text-indent: 1rem;
 }
 
@@ -464,7 +464,7 @@ input,
 textarea {
     margin: 5px 0;
     padding: 10px;
-    background-color: #ececec;
+    background-color: #ECECEC;
     border: none;
     border-radius: 4px;
 }
@@ -474,11 +474,11 @@ textarea {
 }
 
 sup {
-    color: #ff0000;
+    color: #FF0000;
 }
 
 button {
-    background: #ff8b00;
+    background: #FF8B00;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -489,7 +489,7 @@ button {
 
 input:focus,
 input:hover {
-    border: 1px solid #ff8b00 !important;
+    border: 1px solid #FF8B00 !important;
     box-shadow: 0 0 5px var(--primary);
     outline-offset: 0;
     outline: none;
@@ -510,6 +510,9 @@ input:hover {
     }
     .footer-info {
         height: 35rem;
+    }
+    footer {
+        margin-top: 7rem;
     }
 }
 
@@ -533,6 +536,9 @@ input:hover {
         flex-direction: column;
         align-items: flex-start;
     }
+    .navbar {
+        padding-top: 5px;
+    }
     .navbar-links ul {
         flex-direction: column;
         width: 100%;
@@ -546,9 +552,6 @@ input:hover {
     }
     .navbar-links.active {
         display: flex;
-    }
-    main {
-        height: 55rem;
     }
     form input {
         width: 60%;
@@ -567,7 +570,7 @@ input:hover {
         right: 5px;
     }
     .download button {
-        width: 50%;
+        width: 70%;
     }
     .link-left {
         transform: translate(-4.2rem);
@@ -583,7 +586,7 @@ input:hover {
     }
     .footer-info {
         height: 58rem;
-        margin-top: 8rem;
+        margin-top: -4rem;
     }
     #newsletter .cta-subscribe {
         width: 100%;
@@ -600,13 +603,11 @@ input:hover {
     }
     .copyright p {
         font-weight: 400;
+        font-size: .8rem;
     }
 }
 
 @media only screen and (max-width: 360px) {
-    footer {
-        padding-top: 3rem;
-    }
     .link-left {
         padding-left: 4.4rem;
     }
@@ -622,5 +623,11 @@ input:hover {
     }
     .footer-info {
         height: auto;
+    }
+    .download button {
+        width: 72%;
+    }
+    .copyright p {
+        font-size: .76rem;
     }
 }

@@ -19,9 +19,6 @@ from fireapp import views as fireapp_views
 import fireapp
 from django.conf.urls import handler404
 
-
-#app_name = "fireapp"
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('fireapp.urls')), 

@@ -72,7 +72,7 @@ def contact(request):
         else:
             newsletter_sub_request(request)
     
-    context = {'contact': SubmitQuestion(), 'newsletter': CreateNewEmailSubscription()}
+    context = {'contact': SubmitQuestion()}
 
     return render(request, "contact.html", context)
 

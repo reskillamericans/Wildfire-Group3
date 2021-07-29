@@ -35,7 +35,7 @@
             <div class="navbar-links">
                 <ul class="nav-links">
                     <li><a href="{% url "homepage" %}">HOME</a></li>
-                    <li><a href="{% url "about-us" %}" >ABOUT</a></li>
+                    <li><a href="{% url "about" %}" >ABOUT</a></li>
                     <li><a href="{% url "contact" %}" class="active-link">CONTACT</a></li>
                     <li><a href="{% url "faq" %}">FAQ</a></li>
                 </ul>
@@ -68,7 +68,7 @@
                 <p>Subscribe to our newsletter</p>
                 {% csrf_token %}
                 {{ newsletter }}
-                <!-- <input type="email" id="subscribe-email" name="email" placeholder="Enter Your Email"> -->
+                <input type="email" id="subscribe-email" name="email" placeholder="Enter Your Email">
                 <button class="cta cta-subscribe">Subscribe</button>
             </form>
             <div class="link-list">
