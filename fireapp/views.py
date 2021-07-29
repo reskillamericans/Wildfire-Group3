@@ -5,6 +5,8 @@ from django.core.mail import mail_admins, send_mail
 from .forms import CreateNewEmailSubscription, SubmitQuestion
 from .models import NewsletterEmailSub, Faq
 from django.contrib.auth.models import User
+from django.db.models import Q
+
 
 # Create your views here.
 
@@ -14,14 +16,6 @@ def index(request):
 
     return render(request, "index.html")
 
-def search(request):
-    query=None
-    results=[]
-    if request.method=="GET":
-        query=request.Get.get('search')
-        results=Faq.objects.filter(Q(title__icontains=query) | Q(response__icontains=query | Q(footer__icontains==query)))
-    return render(request, 'search.html', {'query': query, 
-                                           'results': results})
 def faq(request):
     context = {
         "questions" : Faq.objects.all()
@@ -30,8 +24,30 @@ def faq(request):
     if request.method == 'POST':
         newsletter_sub_request(request)
 
-    return render(request, "faq.html", context)
+    if request.method == 'GET':
+        query= request.GET.get('query')
+        if query:
+            faq = Faq.objects.filter(title__icontains=query)
+            context['faq'] = faq
+    else:
+        faq = Faq.objects.all()
+        context['faq'] = faq
 
+        #if query is None:
+        #     lookups= Q(title__icontains=query) | Q(response__icontains=query)
+
+        #     results= Faq.objects.filter(lookups).distinct()
+
+        #     context={'results': results,
+        #     'submitbutton': submitbutton}
+
+        #     return render(request, 'templates/faq.html', context)
+
+        # else:
+        #     return render(request, 'templates/faq.html')
+
+    return render(request, "faq.html", context)   
+    
 def contact(request):
     if request.method == 'POST':
         if request.POST.__contains__("first_name"):

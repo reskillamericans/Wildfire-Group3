@@ -3,7 +3,7 @@ from django.db.models.fields import CharField, DateTimeField, EmailField
 from datetime import datetime
 from django.utils import timezone
 from django.core.validators import RegexValidator
-from django.urls import reverse
+
 
 # Create your models here.
 
@@ -52,8 +52,7 @@ class Faq(models.Model):
 
     def __str__(self):
         return f"{self.title}"
-    def get_absolute_url(self):
-        return reverse('fireapp:search', args=[self.id,])
+   
 
 class Contact(models.Model):
     first_name = CharField(max_length=50)

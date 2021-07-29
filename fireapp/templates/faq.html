@@ -46,26 +46,47 @@
             <p>We've got all the answers for you (well, most of the times!)</p>
             <p>Below, you will find answers to most of the Frequently Asked Questions you may have on FireReporter. If you don't find the answer you're looking for, feel free to reach us through, Contact Us.</p>
         </div>
-        <form type="get" action="." style="margin:0">
-             <input id="search_box" type="text"
-             name="search_box" placeholder="Search...">
-             <button id="search_submit" type="submit" >Submit</button>
-        </form>
+        <form class=form-inline my-2 my-lg-0>
+            {% csrf_token %}
+            <input class="form-control mr-sm-2" type="search" placeholder="Search FAQs" aria-label="Search" name="query" id="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+        </div>
+    </form>
+
     </section>
     <main>
         <div>
-            <h1>FAQs about FireReporter</h1>
+            <h1>FAQs about FireReporter </h1>
+           
         </div>
         <div class="container">
  
             <div class="accordion">
-                {% for question in questions %}
+                {% if faq %}
+                    {% for question in faq %}
+                        <div class="accordion-item">
+                            <a>{{ question.title }}</a>
+                                <div class="content">
+                            <p>{{ question.response }}</p>
+                        </div>
+                    {% endfor %}
+                {%else%}
+                    {% for question in questions %}
+                        <div class="accordion-item">
+                            <a>{{ question.title }}</a>
+                            <div class="content">
+                            <p>{{ question.response }}</p>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+    
+                <!-- {% for question in questions %}
                     <div class="accordion-item">
                         <a>{{ question.title }}</a>
                         <div class="content">
                             <p>{{ question.response }}</p>
                     </div>
-                {% endfor %}
+                {% endfor %} -->
 
               </div>
               </div>
