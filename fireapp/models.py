@@ -4,6 +4,7 @@ from datetime import datetime
 from django.utils import timezone
 from django.core.validators import RegexValidator
 
+
 # Create your models here.
 
 class RegisteredUser(models.Model):
@@ -51,6 +52,7 @@ class Faq(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+   
 
 class Contact(models.Model):
     first_name = CharField(max_length=50)
