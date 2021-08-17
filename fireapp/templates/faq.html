@@ -65,7 +65,7 @@
                 {% if faq %}
                     {% for question in faq %}
                         <div class="accordion-item">
-                            <a>{{ question.title }}</a>
+                            <a><b>{{ question.title }}</b></a>
                                 <div class="content">
                             <p>{{ question.response }}</p>
                         </div>
@@ -73,21 +73,12 @@
                 {%else%}
                     {% for question in questions %}
                         <div class="accordion-item">
-                            <a>{{ question.title }}</a>
+                            <a><b>{{ question.title }}</b></a>
                             <div class="content">
                             <p>{{ question.response }}</p>
                         </div>
                     {% endfor %}
                 {% endif %}
-    
-                <!-- {% for question in questions %}
-                    <div class="accordion-item">
-                        <a><b>{{ question.title }}</b></a>
-                        <div class="content">
-                            <p>{{ question.response }}</p>
-                    </div>
-                {% endfor %} -->
-
               </div>
               </div>
             </div>
